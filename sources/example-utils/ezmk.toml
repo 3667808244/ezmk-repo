@@ -1,0 +1,12 @@
+[project]
+name = "example-utils"
+type = "utils"
+version = "0.1.0"
+
+[utils]
+tools = ["hello-tool"]
+
+[utils.permissions]
+read = []
+write = []
+run = []

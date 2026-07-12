@@ -1,0 +1,16 @@
+[repo]
+name = "official"
+description = "EazyMake official package repository"
+
+[[packages]]
+name = "example-utils"
+version = "0.1.0"
+file = "packages/example-utils-0.1.0.tar.gz"
+sha256 = "a476ed753a90b60ff6e3f487407c1aee265e8fe82032d8978134bea86f20ae6a"
+
+[[packages]]
+name = "hello-lib"
+version = "0.1.0"
+file = "packages/hello-lib-0.1.0.tar.gz"
+sha256 = "935da50d8be6fa6437b9c53ae0fff22b11dd9c3d01ab3b62041709b973118565"
+

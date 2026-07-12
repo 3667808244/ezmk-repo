@@ -1,0 +1,35 @@
+name: Validate Repository
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run validate.sh
+        run: bash scripts/validate.sh
+
+  # Optional: end-to-end smoke test — requires ezmk binary
+  # Uncomment when ezmk release is available on GitHub Releases:
+  # smoke-test:
+  #   runs-on: ubuntu-latest
+  #   needs: validate
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Download ezmk
+  #       run: |
+  #         curl -fsSL https://raw.githubusercontent.com/3667808244/EazyMake/main/install.sh | bash
+  #         echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+  #     - name: Register repo & install hello-lib
+  #       run: |
+  #         ezmk repo add -u "$(pwd)" --name local-test --type local
+  #         ezmk repo update -u local-test
+  #         ezmk pkg search hello-lib
+  #         ezmk pkg install -p hello-lib

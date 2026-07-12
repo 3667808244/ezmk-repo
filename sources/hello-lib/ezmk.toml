@@ -1,0 +1,12 @@
+[project]
+name = "hello-lib"
+type = "static"
+version = "0.1.0"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+
+[link]
+# static library — no link flags needed
