@@ -1,0 +1,9 @@
+[project]
+name = "catch2"
+type = "static"
+version = "3.6.0"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

@@ -1,0 +1,13 @@
+[project]
+name = "spdlog"
+type = "static"
+version = "1.14.1"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+flags = ["-DSPDLOG_COMPILED_LIB", "-DSPDLOG_FMT_EXTERNAL"]
+
+[depends]
+lib = ["fmt"]

@@ -1,0 +1,9 @@
+[project]
+name = "lua"
+type = "static"
+version = "5.4.7"
+language = "C99"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

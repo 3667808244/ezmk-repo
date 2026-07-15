@@ -1,0 +1,9 @@
+[project]
+name = "sqlite3"
+type = "static"
+version = "3.46.0"
+language = "C99"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

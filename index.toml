@@ -3,14 +3,56 @@ name = "official"
 description = "EazyMake official package repository"
 
 [[packages]]
+name = "catch2"
+version = "3.6.0"
+file = "packages/catch2-3.6.0.tar.gz"
+sha256 = "47e5e6a0632355344bdec7a6de36ca23e76b4cb88a7d8fa747d2eccbfcaed964"
+
+[[packages]]
 name = "example-utils"
 version = "0.1.0"
 file = "packages/example-utils-0.1.0.tar.gz"
-sha256 = "a476ed753a90b60ff6e3f487407c1aee265e8fe82032d8978134bea86f20ae6a"
+sha256 = "36f6e0d5abe28eb3a48d0d0d641c781d173ace5247d5ae31d1271ea37f418bf5"
+
+[[packages]]
+name = "fmt"
+version = "10.2.1"
+file = "packages/fmt-10.2.1.tar.gz"
+sha256 = "a6cde5bc10fb4e7807d42ee7faa4af0deccba3e4cebbb6ab63a9d483b08b183f"
 
 [[packages]]
 name = "hello-lib"
 version = "0.1.0"
 file = "packages/hello-lib-0.1.0.tar.gz"
-sha256 = "935da50d8be6fa6437b9c53ae0fff22b11dd9c3d01ab3b62041709b973118565"
+sha256 = "52ee47f6e87f70af871d10c03d76c31d6acba7189b44f867dbcada709e0ab7f3"
+
+[[packages]]
+name = "lua"
+version = "5.4.7"
+file = "packages/lua-5.4.7.tar.gz"
+sha256 = "b32294eb205521959ab27ff2f906691be03a5585f0c4b640287bc9a7e409426f"
+
+[[packages]]
+name = "nlohmann_json"
+version = "3.11.3"
+file = "packages/nlohmann_json-3.11.3.tar.gz"
+sha256 = "086f964106688a938866175ebaae3bf60ed9119d7e8216cce258bc3f36bf0d56"
+
+[[packages]]
+name = "spdlog"
+version = "1.14.1"
+file = "packages/spdlog-1.14.1.tar.gz"
+sha256 = "f665a2311537a3d71553e38b3eca10e0bb6ea9aaa38bb9d030affcc36a8906d3"
+
+[[packages]]
+name = "sqlite3"
+version = "3.46.0"
+file = "packages/sqlite3-3.46.0.tar.gz"
+sha256 = "e813971066e54167082524ad2acb5b49f4ee6c43ea54665664bd4d40280a3dba"
+
+[[packages]]
+name = "tinyxml2"
+version = "11.0.0"
+file = "packages/tinyxml2-11.0.0.tar.gz"
+sha256 = "02128b5d879617deb2580ca6d03d325642d084527255e2d26d9dca65bfb63902"
 

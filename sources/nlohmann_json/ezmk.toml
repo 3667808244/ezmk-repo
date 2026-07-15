@@ -1,0 +1,9 @@
+[project]
+name = "nlohmann_json"
+type = "static"
+version = "3.11.3"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

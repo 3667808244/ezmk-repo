@@ -26,10 +26,32 @@ lib = ["hello-lib"]
 
 ## Available Packages
 
-| Package | Type | Description |
-|---------|------|-------------|
-| `hello-lib` | static | Minimal example static library |
-| `example-utils` | utils | Example Lua utils tool with permissions |
+### Libraries
+
+| Package | Version | Type | Language | Description |
+|---------|---------|------|----------|-------------|
+| `catch2` | 3.6.0 | static | C++17 | Catch2 testing framework (header-only + stub) |
+| `fmt` | 10.2.1 | static | C++17 | {fmt} formatting library |
+| `hello-lib` | 0.1.0 | static | C++17 | Minimal example static library |
+| `lua` | 5.4.7 | static | C | Lua 5.4 interpreter C library |
+| `nlohmann_json` | 3.11.3 | static | C++17 | JSON for Modern C++ (header-only + stub) |
+| `spdlog` | 1.14.1 | static | C++17 | Fast C++ logging library (depends on `fmt`) |
+| `sqlite3` | 3.46.0 | static | C | SQLite embedded database (single-file amalgamation) |
+| `tinyxml2` | 11.0.0 | static | C++17 | Lightweight XML parsing library |
+
+### Utilities
+
+| Package | Version | Type | Description |
+|---------|---------|------|-------------|
+| `example-utils` | 0.1.0 | utils | Example Lua utils tool with permissions |
+
+### Dependency Graph
+
+```
+spdlog ──→ fmt
+```
+
+All other packages are self-contained with no external dependencies.
 
 ## Repository Structure
 
