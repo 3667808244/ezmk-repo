@@ -1,0 +1,12 @@
+[project]
+name = "cli11"
+type = "static"
+version = "2.5.0"
+language = "C++17"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+
+[depends]
+lib = []

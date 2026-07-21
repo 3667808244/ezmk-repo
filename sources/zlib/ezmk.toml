@@ -1,0 +1,13 @@
+[project]
+name = "zlib"
+type = "static"
+version = "1.3.1"
+language = "C11"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+flags = ["-D_DEFAULT_SOURCE", "-Wno-implicit-function-declaration"]
+
+[depends]
+lib = []

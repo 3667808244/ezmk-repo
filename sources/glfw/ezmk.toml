@@ -1,0 +1,19 @@
+[project]
+name = "glfw"
+type = "static"
+version = "3.4"
+language = "C11"
+
+[compile]
+include_dirs = ["include", "src"]
+src_dirs = ["src"]
+flags = ["-D_GLFW_WIN32", "-DUNICODE", "-D_UNICODE"]
+
+[compile.macros]
+_GLFW_WIN32 = "1"
+
+[link]
+system_target = ["gdi32", "opengl32"]
+
+[depends]
+lib = []

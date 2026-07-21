@@ -1,0 +1,16 @@
+[project]
+name = "yaml-cpp"
+type = "static"
+version = "0.8.0"
+language = "C++17"
+
+[compile]
+include_dirs = ["include", "src"]
+src_dirs = ["src"]
+flags = ["-DYAML_CPP_STATIC_DEFINE", "-include", "cstdint", "-include", "cinttypes"]
+
+[link]
+system_target = []
+
+[depends]
+lib = []

@@ -1,0 +1,12 @@
+[project]
+name = "imgui-dx10"
+type = "static"
+version = "1.91.9"
+language = "C++17"
+
+[compile]
+include_dirs = ["include", "include/imgui/backends"]
+src_dirs = ["src"]
+
+[depends]
+lib = ["imgui"]

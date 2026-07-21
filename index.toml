@@ -56,3 +56,136 @@ version = "11.0.0"
 file = "packages/tinyxml2-11.0.0.tar.gz"
 sha256 = "02128b5d879617deb2580ca6d03d325642d084527255e2d26d9dca65bfb63902"
 
+
+[[packages]]
+name = "cli11"
+version = "2.5.0"
+file = "packages/cli11-2.5.0.tar.gz"
+sha256 = "22f2c8f1e47b3ad081237a352e82db9ee99e3a454d6ea2107922aa510292edc6"
+
+[[packages]]
+name = "zlib"
+version = "1.3.1"
+file = "packages/zlib-1.3.1.tar.gz"
+sha256 = "6be5441d950d89e308767ba73994e32c515c1f28fcd4ec1f4be9a2006307152a"
+
+[[packages]]
+name = "glfw"
+version = "3.4"
+file = "packages/glfw-3.4.tar.gz"
+sha256 = "ea0c138513f2300bd355d3ddb3ff9c8ec8ae3be5cbf60dfb401e180aaeeb751e"
+
+[[packages]]
+name = "yaml-cpp"
+version = "0.8.0"
+file = "packages/yaml-cpp-0.8.0.tar.gz"
+sha256 = "690f3e4634f213de247843af0c1f325f33126f1ac07a04ed5241823918ebdfa2"
+
+[[packages]]
+name = "sdl2"
+version = "2.32.10"
+file = "packages/sdl2-2.32.10.tar.gz"
+sha256 = "b06b88e2c13ee07733732640fef1deeb1ed931da74ce61cbb9b5af400b3d2ef2"
+
+[[packages]]
+name = "imgui"
+version = "1.91.9"
+file = "packages/imgui-1.91.9.tar.gz"
+sha256 = "88ba3ea2877cbf04de812cc54c2bea1307b3826cccdf80da404dd3787319a0a2"
+
+[[packages]]
+name = "imgui-glfw"
+version = "1.91.9"
+file = "packages/imgui-glfw-1.91.9.tar.gz"
+sha256 = "ec63ea65bb1a52488cec4224d3f051c78bbad52164fad4d1b4767b76cbb1f4c2"
+
+[[packages]]
+name = "imgui-sdl2"
+version = "1.91.9"
+file = "packages/imgui-sdl2-1.91.9.tar.gz"
+sha256 = "06bf1bedb936bfdb5fe848e0ae3bfaa81491caf7f057316c401bce1897f5dbf3"
+
+[[packages]]
+name = "imgui-sdl3"
+version = "1.91.9"
+file = "packages/imgui-sdl3-1.91.9.tar.gz"
+sha256 = "6b16b8c9ff7aad208856110eaab43944e57cc8127efeca89e16cdbb294d072c4"
+
+[[packages]]
+name = "imgui-win32"
+version = "1.91.9"
+file = "packages/imgui-win32-1.91.9.tar.gz"
+sha256 = "671dfdb031fdd8e48e1169f38b19a3cbc6e98ef306dbed76aee7ef5d3034ae13"
+
+[[packages]]
+name = "imgui-glut"
+version = "1.91.9"
+file = "packages/imgui-glut-1.91.9.tar.gz"
+sha256 = "01835f4720208301b90c002e03a568d99429a7e2470cf5a2010d3061e34281b6"
+
+[[packages]]
+name = "imgui-osx"
+version = "1.91.9"
+file = "packages/imgui-osx-1.91.9.tar.gz"
+sha256 = "8b117471d6580275b75dcea95875dcd4b1dfaa957c791b438e1b8c63df40b75b"
+
+[[packages]]
+name = "imgui-android"
+version = "1.91.9"
+file = "packages/imgui-android-1.91.9.tar.gz"
+sha256 = "adb337e70805dd96e93d2979b20cccb42f17e71143aceed25b5c21b20d674938"
+
+[[packages]]
+name = "imgui-opengl2"
+version = "1.91.9"
+file = "packages/imgui-opengl2-1.91.9.tar.gz"
+sha256 = "0260b60887e47800772bb07d4f4021b785aa42add0ec45ecb247a6cb637c1d77"
+
+[[packages]]
+name = "imgui-opengl3"
+version = "1.91.9"
+file = "packages/imgui-opengl3-1.91.9.tar.gz"
+sha256 = "b88ba158d3d57f9c74c928700517b307068120c7315442e1b672e993c3c64685"
+
+[[packages]]
+name = "imgui-vulkan"
+version = "1.91.9"
+file = "packages/imgui-vulkan-1.91.9.tar.gz"
+sha256 = "ed342dac854dc1f23b2fc855489461affaa07655d4b8512fb9d33336bc614ba5"
+
+[[packages]]
+name = "imgui-dx9"
+version = "1.91.9"
+file = "packages/imgui-dx9-1.91.9.tar.gz"
+sha256 = "2da5bf5218ae051265b210d6cc69c9c7ab19a6331405d761443d3d46c84e3c82"
+
+[[packages]]
+name = "imgui-dx10"
+version = "1.91.9"
+file = "packages/imgui-dx10-1.91.9.tar.gz"
+sha256 = "ec57c36d900ed5e99ef22b5ca0ae307a4a29fc0f8f9cc3550a25dab8709c417e"
+
+[[packages]]
+name = "imgui-dx11"
+version = "1.91.9"
+file = "packages/imgui-dx11-1.91.9.tar.gz"
+sha256 = "6494842d1a14a88577e0d1343eb49ed31d95e51e76c1b6e40b3a8181ce602b05"
+
+[[packages]]
+name = "imgui-dx12"
+version = "1.91.9"
+file = "packages/imgui-dx12-1.91.9.tar.gz"
+sha256 = "93f6e2b47649028ca546378ab95b2a1112af4b49a82ee6611604138e9556fe1a"
+
+[[packages]]
+name = "imgui-metal"
+version = "1.91.9"
+file = "packages/imgui-metal-1.91.9.tar.gz"
+sha256 = "9b9516c58228bbceaaf618b9ff2f60ed9ec41f262a36ed966ed8e8bd62fe1192"
+
+[[packages]]
+name = "imgui-wgpu"
+version = "1.91.9"
+file = "packages/imgui-wgpu-1.91.9.tar.gz"
+sha256 = "b879ed5a17ea9e0d95a9bdbb34addad5f0aa35bdcc0355d961c5be5d15f27e4b"
+
