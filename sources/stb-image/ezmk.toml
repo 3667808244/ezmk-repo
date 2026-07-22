@@ -1,0 +1,10 @@
+﻿[project]
+name = "stb-image"
+type = "static"
+version = "2.30.0"
+language = "C99"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

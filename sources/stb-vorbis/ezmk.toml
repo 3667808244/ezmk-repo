@@ -1,0 +1,9 @@
+﻿[project]
+name = "stb-vorbis"
+type = "static"
+version = "1.22.0"
+language = "C99"
+
+[compile]
+include_dirs = ["include"]
+flags = []

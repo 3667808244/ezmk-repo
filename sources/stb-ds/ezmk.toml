@@ -1,0 +1,10 @@
+﻿[project]
+name = "stb-ds"
+type = "static"
+version = "0.67.0"
+language = "C99"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

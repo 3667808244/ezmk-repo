@@ -1,0 +1,13 @@
+﻿[project]
+name = "boost-optional"
+type = "static"
+version = "1.87.0"
+language = "C++17"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []
+
+[depends]
+lib = ["boost-config", "boost-assert", "boost-core", "boost-static-assert", "boost-throw-exception"]

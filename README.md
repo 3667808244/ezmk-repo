@@ -26,7 +26,7 @@ lib = ["hello-lib"]
 
 ## Available Packages
 
-### Libraries
+### Libraries — General
 
 | Package | Version | Type | Language | Description |
 |---------|---------|------|----------|-------------|
@@ -39,6 +39,36 @@ lib = ["hello-lib"]
 | `sqlite3` | 3.46.0 | static | C | SQLite embedded database (single-file amalgamation) |
 | `tinyxml2` | 11.0.0 | static | C++17 | Lightweight XML parsing library |
 
+### Libraries — stb Single-File C Libraries (MIT / Public Domain)
+
+| Package | Version | Type | Language | Description |
+|---------|---------|------|----------|-------------|
+| `stb-ds` | 0.67.0 | header-only | C99 | Type-safe dynamic arrays and hash maps (C macros) |
+| `stb-image` | 2.30.0 | header-only | C99 | Image loading (PNG, JPEG, BMP, TGA, HDR, PSD, GIF) |
+| `stb-image-resize` | 0.97.0 | header-only | C99 | Image resizing/filtering (v2) |
+| `stb-image-write` | 1.16.0 | header-only | C99 | Image writing (PNG, JPEG, BMP, TGA) |
+| `stb-perlin` | 0.05.0 | header-only | C99 | Perlin noise generation |
+| `stb-rect-pack` | 1.01.0 | header-only | C99 | Rectangle packing for texture atlases |
+| `stb-sprintf` | 1.10.0 | header-only | C99 | Fast sprintf/sscanf replacement |
+| `stb-textedit` | 1.14.0 | header-only | C99 | Simple text editor widget |
+| `stb-truetype` | 1.27.0 | header-only | C99 | TrueType font rasterization |
+| `stb-vorbis` | 1.22.0 | static | C99 | Ogg Vorbis audio decoder |
+
+### Libraries — Boost Header-Only Subset (BSL-1.0, C++17, v1.87.0)
+
+| Package | Version | Type | Description |
+|---------|---------|------|-------------|
+| `boost-algorithm` | 1.87.0 | header-only | String algorithms (trim, split, join, starts_with, etc.) |
+| `boost-assert` | 1.87.0 | header-only | Lightweight assertion macros (BOOST_ASSERT/BOOST_VERIFY) |
+| `boost-config` | 1.87.0 | header-only | Compiler/platform feature detection macros (base dependency) |
+| `boost-core` | 1.87.0 | header-only | Core utilities (addressof, ref, noncopyable, checked_delete) |
+| `boost-lexical-cast` | 1.87.0 | header-only | String-to-number and number-to-string conversions |
+| `boost-mp11` | 1.87.0 | header-only | C++11 metaprogramming library |
+| `boost-optional` | 1.87.0 | header-only | Optional<T> — type-safe nullable value |
+| `boost-static-assert` | 1.87.0 | header-only | Compile-time assertions (BOOST_STATIC_ASSERT) |
+| `boost-throw-exception` | 1.87.0 | header-only | Exception throwing utilities |
+| `boost-variant2` | 1.87.0 | header-only | Type-safe union (variant<Ts...>) |
+
 ### Utilities
 
 | Package | Version | Type | Description |
@@ -49,6 +79,17 @@ lib = ["hello-lib"]
 
 ```
 spdlog ──→ fmt
+
+# Boost internal dependencies (header-only, compile-time only)
+boost-assert ──→ boost-config
+boost-core ──→ boost-config, boost-assert
+boost-static-assert ──→ boost-config
+boost-throw-exception ──→ boost-config, boost-assert
+boost-lexical-cast ──→ boost-config, boost-assert, boost-core, boost-static-assert, boost-throw-exception
+boost-algorithm ──→ boost-config, boost-assert, boost-core
+boost-optional ──→ boost-config, boost-assert, boost-core, boost-static-assert, boost-throw-exception
+boost-variant2 ──→ boost-config, boost-assert, boost-mp11
+boost-mp11 ──→ boost-config
 ```
 
 All other packages are self-contained with no external dependencies.

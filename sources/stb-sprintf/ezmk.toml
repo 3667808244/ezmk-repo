@@ -1,0 +1,10 @@
+﻿[project]
+name = "stb-sprintf"
+type = "static"
+version = "1.10.0"
+language = "C99"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

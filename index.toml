@@ -3,58 +3,178 @@ name = "official"
 description = "EazyMake official package repository"
 
 [[packages]]
+name = "boost-algorithm"
+version = "1.87.0"
+file = "packages/boost-algorithm-1.87.0.tar.gz"
+sha256 = "d1e978179f3ab7a02673d256b2805a21120343c5edaea9ac819a1ab8f5ede621"
+
+[[packages]]
+name = "boost-assert"
+version = "1.87.0"
+file = "packages/boost-assert-1.87.0.tar.gz"
+sha256 = "a99e07a482bacc7242b47c5a30ab58651a9fb27dc525da8ccdeb464b045191eb"
+
+[[packages]]
+name = "boost-config"
+version = "1.87.0"
+file = "packages/boost-config-1.87.0.tar.gz"
+sha256 = "be3a0ea6bc5cfcadc465ed2af76e6fb2a37b52e1277aaf8661bb7c44cdd34007"
+
+[[packages]]
+name = "boost-core"
+version = "1.87.0"
+file = "packages/boost-core-1.87.0.tar.gz"
+sha256 = "88319f058764d8bb5ac7850192e91d58fbd88e0f980589f71134fb87ec6d5700"
+
+[[packages]]
+name = "boost-lexical-cast"
+version = "1.87.0"
+file = "packages/boost-lexical-cast-1.87.0.tar.gz"
+sha256 = "92a5ad8b061e10e9da70fc3224e82b28231e6bf41fed8336cd39febac417462d"
+
+[[packages]]
+name = "boost-mp11"
+version = "1.87.0"
+file = "packages/boost-mp11-1.87.0.tar.gz"
+sha256 = "db810d2986bdde43e39f5a46828f3d2b077b6a08ba92c552f42234de1d6ee096"
+
+[[packages]]
+name = "boost-optional"
+version = "1.87.0"
+file = "packages/boost-optional-1.87.0.tar.gz"
+sha256 = "8cbe678fe32089f7c293f3cb6aab9ef4a5fba760adef2f376ac22be5ac79e971"
+
+[[packages]]
+name = "boost-static-assert"
+version = "1.87.0"
+file = "packages/boost-static-assert-1.87.0.tar.gz"
+sha256 = "c8e9333afea5d56d91ba4a7fade70f4a16b804376d9e107b8eef6b8d0a86fb8f"
+
+[[packages]]
+name = "boost-throw-exception"
+version = "1.87.0"
+file = "packages/boost-throw-exception-1.87.0.tar.gz"
+sha256 = "2bfa35df2e35b00facc91dd3e605f09098b9252fd83ba215eeb1f30a64844dc6"
+
+[[packages]]
+name = "boost-variant2"
+version = "1.87.0"
+file = "packages/boost-variant2-1.87.0.tar.gz"
+sha256 = "1c160dbf8784e4959b9c08a0bd4be46f8779c5b50eef5e452b3b0d4eb23d5a97"
+
+[[packages]]
 name = "catch2"
 version = "3.6.0"
 file = "packages/catch2-3.6.0.tar.gz"
-sha256 = "47e5e6a0632355344bdec7a6de36ca23e76b4cb88a7d8fa747d2eccbfcaed964"
+sha256 = "2b03a1a47de8b3fdddc62281b9f78600a2cb2aa23a357720c073799cfe64b016"
 
 [[packages]]
 name = "example-utils"
 version = "0.1.0"
 file = "packages/example-utils-0.1.0.tar.gz"
-sha256 = "36f6e0d5abe28eb3a48d0d0d641c781d173ace5247d5ae31d1271ea37f418bf5"
+sha256 = "e9eb41db39f7411be3742274b1a296777f661768baf0f6e118bf7e6de9740f69"
 
 [[packages]]
 name = "fmt"
 version = "10.2.1"
 file = "packages/fmt-10.2.1.tar.gz"
-sha256 = "a6cde5bc10fb4e7807d42ee7faa4af0deccba3e4cebbb6ab63a9d483b08b183f"
+sha256 = "fe0b80c82dd612e17c938a7167556a3228eddaaeda5432ae55a8456fd5c91406"
 
 [[packages]]
 name = "hello-lib"
 version = "0.1.0"
 file = "packages/hello-lib-0.1.0.tar.gz"
-sha256 = "52ee47f6e87f70af871d10c03d76c31d6acba7189b44f867dbcada709e0ab7f3"
+sha256 = "c54231a8062fad4644d748292612573e0ed7fab3b987df2ff27a0ed66d784394"
 
 [[packages]]
 name = "lua"
 version = "5.4.7"
 file = "packages/lua-5.4.7.tar.gz"
-sha256 = "b32294eb205521959ab27ff2f906691be03a5585f0c4b640287bc9a7e409426f"
+sha256 = "564dda432ebd9b694d810d986388089c423855f8782c07a906e98b3f374236c7"
 
 [[packages]]
 name = "nlohmann_json"
 version = "3.11.3"
 file = "packages/nlohmann_json-3.11.3.tar.gz"
-sha256 = "086f964106688a938866175ebaae3bf60ed9119d7e8216cce258bc3f36bf0d56"
+sha256 = "8e7c4da0151ec8bbb1e14df4af3bf536b0520f29ac66e8bfe2599b0208463d40"
 
 [[packages]]
 name = "spdlog"
 version = "1.14.1"
 file = "packages/spdlog-1.14.1.tar.gz"
-sha256 = "f665a2311537a3d71553e38b3eca10e0bb6ea9aaa38bb9d030affcc36a8906d3"
+sha256 = "3c1114f1452866fe897197e6ea1a891df3662e6779b9f9714b2eafd3dc271a12"
 
 [[packages]]
 name = "sqlite3"
 version = "3.46.0"
 file = "packages/sqlite3-3.46.0.tar.gz"
-sha256 = "e813971066e54167082524ad2acb5b49f4ee6c43ea54665664bd4d40280a3dba"
+sha256 = "33d2e4076c194c56d5e9f5847c08618e0527c65fa8e56d4835f90b4bbbe4828e"
+
+[[packages]]
+name = "stb-ds"
+version = "0.67.0"
+file = "packages/stb-ds-0.67.0.tar.gz"
+sha256 = "dde7b03f2c07313c5f6914af9971d025271652840c29d28663b363a658113708"
+
+[[packages]]
+name = "stb-image"
+version = "2.30.0"
+file = "packages/stb-image-2.30.0.tar.gz"
+sha256 = "29ee2eca53fd3ae80954d4e4d70f15ff136b8c4714a16d3cb8108e3dcfcc17f9"
+
+[[packages]]
+name = "stb-image-resize"
+version = "0.97.0"
+file = "packages/stb-image-resize-0.97.0.tar.gz"
+sha256 = "34414aa3ebc4d1ad24f37a5a4b86341a0c4a241b4b150aec26472a1d9de114ed"
+
+[[packages]]
+name = "stb-image-write"
+version = "1.16.0"
+file = "packages/stb-image-write-1.16.0.tar.gz"
+sha256 = "f911181131f820cb37c1802e7a53032c8868f84f4b9247f874d114002b441471"
+
+[[packages]]
+name = "stb-perlin"
+version = "0.05.0"
+file = "packages/stb-perlin-0.05.0.tar.gz"
+sha256 = "f61ed426da5d559d3e57d123d42d19c741401aaf28e5f24fde459f08df20e2c2"
+
+[[packages]]
+name = "stb-rect-pack"
+version = "1.01.0"
+file = "packages/stb-rect-pack-1.01.0.tar.gz"
+sha256 = "34ab5303b8fb0dd1b90151b35cb45e5f00ae42c59cfb8d8aa6f5867e39233ef7"
+
+[[packages]]
+name = "stb-sprintf"
+version = "1.10.0"
+file = "packages/stb-sprintf-1.10.0.tar.gz"
+sha256 = "8b7fb8d48d07264cff8a646a0b219e19b9b1ac489eb7aed05c13f74263ec4069"
+
+[[packages]]
+name = "stb-textedit"
+version = "1.14.0"
+file = "packages/stb-textedit-1.14.0.tar.gz"
+sha256 = "390fbeb8cb59e78ff78330f93a1ae61659fb63bf37045c37364a9d1d2f2aac75"
+
+[[packages]]
+name = "stb-truetype"
+version = "1.27.0"
+file = "packages/stb-truetype-1.27.0.tar.gz"
+sha256 = "be07366ce5bbad78f7b156963f3b6b8143f3e11651e2269ee6b0b4937d33c4a3"
+
+[[packages]]
+name = "stb-vorbis"
+version = "1.22.0"
+file = "packages/stb-vorbis-1.22.0.tar.gz"
+sha256 = "bc8037fe82e8db2f3a9d99d8578b5bc40d7dd5fb512edf48ede36dc5908d9d04"
 
 [[packages]]
 name = "tinyxml2"
 version = "11.0.0"
 file = "packages/tinyxml2-11.0.0.tar.gz"
-sha256 = "02128b5d879617deb2580ca6d03d325642d084527255e2d26d9dca65bfb63902"
+sha256 = "c286d41d94ef1d37a30c4e534df3c63a812c419de4cfce9870202b1c75ee4aa3"
 
 
 [[packages]]

@@ -1,0 +1,10 @@
+﻿[project]
+name = "stb-rect-pack"
+type = "static"
+version = "1.01.0"
+language = "C99"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

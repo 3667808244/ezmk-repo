@@ -1,0 +1,10 @@
+﻿[project]
+name = "stb-perlin"
+type = "static"
+version = "0.05.0"
+language = "C99"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

@@ -1,0 +1,10 @@
+﻿[project]
+name = "stb-image-write"
+type = "static"
+version = "1.16.0"
+language = "C99"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []
