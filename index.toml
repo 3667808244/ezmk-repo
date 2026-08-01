@@ -123,6 +123,18 @@ file = "packages/cli11-2.5.0.tar.gz"
 sha256 = "70b95a0c1913d69ca39ba12fba50c4e646844f5afca38126e87f80648266ecd7"
 
 [[packages]]
+name = "cpp-httplib"
+version = "0.18.3"
+file = "packages/cpp-httplib-0.18.3.tar.gz"
+sha256 = "6c06b687700ee0f5804cfabdc3aa4ae681fbde567e6c0dd14e22a8f7f9dcde77"
+
+[[packages]]
+name = "eigen"
+version = "3.4.0"
+file = "packages/eigen-3.4.0.tar.gz"
+sha256 = "fd2ddc5aeaa21be3850d4f172a2d74c284a8452bdf86af49d05a07d9e976a9d2"
+
+[[packages]]
 name = "example-utils"
 version = "0.1.0"
 file = "packages/example-utils-0.1.0.tar.gz"
@@ -141,10 +153,22 @@ file = "packages/glfw-3.4.tar.gz"
 sha256 = "3cff228e33a7123e0f4a5337cf0429ef7fab73ed4fac23c41ddf06e3e4ea5a83"
 
 [[packages]]
+name = "googletest"
+version = "1.15.2"
+file = "packages/googletest-1.15.2.tar.gz"
+sha256 = "e3482a4259dd7b58d0ebd5d0a0fb0ac36de1e2eb71f99a1add1e5ccd1822db3e"
+
+[[packages]]
 name = "hello-lib"
 version = "0.1.0"
 file = "packages/hello-lib-0.1.0.tar.gz"
 sha256 = "654a546676730072d0197e2ff05d7ab7760ebfc2e3bfba16bd93d22d0e5bc9a4"
+
+[[packages]]
+name = "hiredis"
+version = "1.2.0"
+file = "packages/hiredis-1.2.0.tar.gz"
+sha256 = "b076442c2a58abe71dd41f60bd2359186f8e41ffd8b117f1e708760b3a4b1ca0"
 
 [[packages]]
 name = "imgui"
@@ -255,6 +279,12 @@ file = "packages/lua-5.4.7.tar.gz"
 sha256 = "917f3daa98baa96c650bf15dae0edb44000f1c048a9feb16dc9026b395433c9e"
 
 [[packages]]
+name = "msgpack-c"
+version = "6.1.0"
+file = "packages/msgpack-c-6.1.0.tar.gz"
+sha256 = "c3c2385ee348e6387dcec8b648a155701af7c2c2de76fb4636318aa761328ba4"
+
+[[packages]]
 name = "nlohmann_json"
 version = "3.11.3"
 file = "packages/nlohmann_json-3.11.3.tar.gz"
@@ -277,6 +307,12 @@ name = "sqlite3"
 version = "3.49.1"
 file = "packages/sqlite3-3.49.1.tar.gz"
 sha256 = "b5758d80ea20382a8a26f9d7fa01ed983678a9e23d862dc372ea3012771324ae"
+
+[[packages]]
+name = "sqlitecpp"
+version = "3.3.0"
+file = "packages/sqlitecpp-3.3.0.tar.gz"
+sha256 = "eee93544d273b30c80d7b1e239ee1448dd38f83e2a652a47d4f95ad5133aeb1e"
 
 [[packages]]
 name = "stb-ds"
@@ -343,6 +379,12 @@ name = "tinyxml2"
 version = "11.0.0"
 file = "packages/tinyxml2-11.0.0.tar.gz"
 sha256 = "bd3f7e880e4bd326710aa375bf204d1b55ead1da6aec3c968d3b9a391d6a7f96"
+
+[[packages]]
+name = "tomlplusplus"
+version = "3.4.0"
+file = "packages/tomlplusplus-3.4.0.tar.gz"
+sha256 = "4c2cbfed9892fe90754ef68e36e88aa92dd32940cba1bdf6f3a4dde2d8e5027d"
 
 [[packages]]
 name = "yaml-cpp"
