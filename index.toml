@@ -57,6 +57,12 @@ file = "packages/boost-lexical-cast-1.88.0.tar.gz"
 sha256 = "1035ebe01d69031fabe9eafc0cffaff4cddd5074b9afc796b8e17b1992f63de0"
 
 [[packages]]
+name = "boost-math"
+version = "1.88.0"
+file = "packages/boost-math-1.88.0.tar.gz"
+sha256 = "287912dcf83deb355f2159d7276a84d044f44f3f06d6a842dba4b1f6c9e2bcb0"
+
+[[packages]]
 name = "boost-mp11"
 version = "1.88.0"
 file = "packages/boost-mp11-1.88.0.tar.gz"
@@ -67,6 +73,12 @@ name = "boost-optional"
 version = "1.88.0"
 file = "packages/boost-optional-1.88.0.tar.gz"
 sha256 = "2c36ffbb1a4078ffa1f8268265de38ea1556d0b4d94fbea5efb72c277c587f35"
+
+[[packages]]
+name = "boost-random"
+version = "1.88.0"
+file = "packages/boost-random-1.88.0.tar.gz"
+sha256 = "ffd0c58b0f84256af3c29682c12dd5ab349a4394b02cd8e587edde79c710096f"
 
 [[packages]]
 name = "boost-smart-ptr"
@@ -157,6 +169,12 @@ name = "googletest"
 version = "1.15.2"
 file = "packages/googletest-1.15.2.tar.gz"
 sha256 = "e3482a4259dd7b58d0ebd5d0a0fb0ac36de1e2eb71f99a1add1e5ccd1822db3e"
+
+[[packages]]
+name = "gRPC"
+version = "1.68.0"
+file = "packages/gRPC-1.68.0.tar.gz"
+sha256 = "39010fd2ab3626e9cf13518b709094fe0f1dc953f57fa7035b466fec349f47e1"
 
 [[packages]]
 name = "hello-lib"
@@ -273,6 +291,18 @@ file = "packages/imgui-win32-1.91.9.tar.gz"
 sha256 = "c33b8e4ee31b17c9bd7f40eba710820dd3e712342ee33f87daa79d68ba6b39e0"
 
 [[packages]]
+name = "libcurl"
+version = "8.11.0"
+file = "packages/libcurl-8.11.0.tar.gz"
+sha256 = "0e51046a2ad9a422872cc7bf7e9f580e634ff9ce4d022b2bb1fe0bbe8eac23fd"
+
+[[packages]]
+name = "libpqxx"
+version = "7.9.2"
+file = "packages/libpqxx-7.9.2.tar.gz"
+sha256 = "ce82233db594edf9a53a26c24f1931286d18179eae95a95ec7a209694246c36e"
+
+[[packages]]
 name = "lua"
 version = "5.4.7"
 file = "packages/lua-5.4.7.tar.gz"
@@ -289,6 +319,18 @@ name = "nlohmann_json"
 version = "3.11.3"
 file = "packages/nlohmann_json-3.11.3.tar.gz"
 sha256 = "edf5f470870fe6bf03a0a87f7a3d916640285aec2c6dc8d110eb97eee128b3b3"
+
+[[packages]]
+name = "openssl"
+version = "3.4.0"
+file = "packages/openssl-3.4.0.tar.gz"
+sha256 = "02bcda0c60f1407ff02b7f755cf1933accf06f7f63b9951e65a01e4024416459"
+
+[[packages]]
+name = "protobuf"
+version = "28.3"
+file = "packages/protobuf-28.3.tar.gz"
+sha256 = "a76026fd3fef60780dfdc0768d11f1216e65de91afdad86384efba781ad3169b"
 
 [[packages]]
 name = "sdl2"
