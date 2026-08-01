@@ -1,0 +1,10 @@
+﻿[project]
+name = "hiredis"
+type = "static"
+version = "1.2.0"
+language = "C11"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+flags = []

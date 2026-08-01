@@ -1,0 +1,15 @@
+﻿[project]
+name = "libcurl"
+type = "static"
+version = "8.11.0"
+language = "C11"
+precompiled = true
+[link]
+system_target = ["ws2_32", "wldap32", "crypt32"]
+
+[compile]
+include_dirs = ["include"]
+flags = []
+
+[depends]
+lib = ["openssl", "zlib"]

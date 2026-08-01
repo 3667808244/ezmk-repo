@@ -1,0 +1,13 @@
+﻿[project]
+name = "sqlitecpp"
+type = "static"
+version = "3.3.0"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+flags = []
+
+[depends]
+lib = ["sqlite3"]

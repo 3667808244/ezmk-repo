@@ -1,0 +1,35 @@
+﻿# boost-math
+
+Boost.math — Mathematical special functions (header-only)
+
+- **Version**: 1.88.0 (Boost release)
+- **License**: Boost Software License 1.0
+- **Type**: Header-only
+- **Source**: [boostorg/math](https://github.com/boostorg/math)
+- **Dependencies**: boost-config, boost-assert, boost-core, boost-static-assert, boost-throw-exception
+- **NOTE**: Headers need to be downloaded from upstream. Run: git clone --depth 1 https://github.com/boostorg/math.git boost_temp/math and copy include/boost/ to this package.
+
+## Usage
+
+Add to your ezmk.toml:
+`	oml
+[depends]
+lib = ["boost-math"]
+`
+"@ | Set-Content -Path "E:\claude_workspace\ezmk-repo\sources/boost-math/README.md" -Encoding UTF8
+
+     = (System.Collections.Hashtable.deps | ForEach-Object { """" }) -join ", "
+    @"
+[project]
+name = "boost-math"
+type = "static"
+version = "1.88.0"
+language = "C++17"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []
+
+[depends]
+lib = []

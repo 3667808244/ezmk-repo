@@ -1,0 +1,10 @@
+﻿[project]
+name = "msgpack-c"
+type = "static"
+version = "6.1.0"
+language = "C11"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

@@ -1,0 +1,12 @@
+﻿[project]
+name = "cpp-httplib"
+type = "static"
+version = "0.18.3"
+language = "C++11"
+header_only = true
+
+[compile]
+include_dirs = ["include"]
+flags = []
+
+want = ["openssl"]

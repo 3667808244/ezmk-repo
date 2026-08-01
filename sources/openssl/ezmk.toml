@@ -1,0 +1,12 @@
+﻿[project]
+name = "openssl"
+type = "static"
+version = "3.4.0"
+language = "C11"
+precompiled = true
+[link]
+system_target = ["ws2_32", "crypt32"]
+
+[compile]
+include_dirs = ["include"]
+flags = []

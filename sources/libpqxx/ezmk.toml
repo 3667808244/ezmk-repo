@@ -1,0 +1,12 @@
+﻿[project]
+name = "libpqxx"
+type = "static"
+version = "7.9.2"
+language = "C++17"
+# NOTE: Requires libpq (PostgreSQL C client). On MSYS2: pacman -S mingw-w64-ucrt-x86_64-postgresql
+# First release targets Linux/macOS; Windows support pending libpq availability.
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+flags = []
