@@ -57,6 +57,12 @@ file = "packages/boost-lexical-cast-1.88.0.tar.gz"
 sha256 = "1035ebe01d69031fabe9eafc0cffaff4cddd5074b9afc796b8e17b1992f63de0"
 
 [[packages]]
+name = "boost-math"
+version = "1.88.0"
+file = "packages/boost-math-1.88.0.tar.gz"
+sha256 = "0505e7d308fbf6a86a02697aa0cb0418913772dd1f662808821a3a040ffdd363"
+
+[[packages]]
 name = "boost-mp11"
 version = "1.88.0"
 file = "packages/boost-mp11-1.88.0.tar.gz"
@@ -67,6 +73,12 @@ name = "boost-optional"
 version = "1.88.0"
 file = "packages/boost-optional-1.88.0.tar.gz"
 sha256 = "2c36ffbb1a4078ffa1f8268265de38ea1556d0b4d94fbea5efb72c277c587f35"
+
+[[packages]]
+name = "boost-random"
+version = "1.88.0"
+file = "packages/boost-random-1.88.0.tar.gz"
+sha256 = "60a1f8ae2fa2084ba68f92627193d558062b415bd7252bf7a1fdc7875404a3b0"
 
 [[packages]]
 name = "boost-smart-ptr"
@@ -123,6 +135,18 @@ file = "packages/cli11-2.5.0.tar.gz"
 sha256 = "70b95a0c1913d69ca39ba12fba50c4e646844f5afca38126e87f80648266ecd7"
 
 [[packages]]
+name = "cpp-httplib"
+version = "0.18.3"
+file = "packages/cpp-httplib-0.18.3.tar.gz"
+sha256 = "8f74d8ce257f4a49e2598880a7e75f687ec8f6d40ea8ec6394dea31c57a69ec7"
+
+[[packages]]
+name = "eigen"
+version = "3.4.0"
+file = "packages/eigen-3.4.0.tar.gz"
+sha256 = "7c326f94ab0424d869465bb811ced5870fa555323c86d68aa39aa8d808cfeea6"
+
+[[packages]]
 name = "example-utils"
 version = "0.1.0"
 file = "packages/example-utils-0.1.0.tar.gz"
@@ -141,10 +165,28 @@ file = "packages/glfw-3.4.tar.gz"
 sha256 = "3cff228e33a7123e0f4a5337cf0429ef7fab73ed4fac23c41ddf06e3e4ea5a83"
 
 [[packages]]
+name = "googletest"
+version = "1.15.2"
+file = "packages/googletest-1.15.2.tar.gz"
+sha256 = "5c50a7ec6c17e6b62c6d7f462afdfe70fd57cb6977529f297d62031ddab3c797"
+
+[[packages]]
+name = "gRPC"
+version = "1.68.0"
+file = "packages/gRPC-1.68.0.tar.gz"
+sha256 = "163d2638729803d295574e3764b898d9e0ce558e73af34d64a4e6896995625be"
+
+[[packages]]
 name = "hello-lib"
 version = "0.1.0"
 file = "packages/hello-lib-0.1.0.tar.gz"
 sha256 = "654a546676730072d0197e2ff05d7ab7760ebfc2e3bfba16bd93d22d0e5bc9a4"
+
+[[packages]]
+name = "hiredis"
+version = "1.2.0"
+file = "packages/hiredis-1.2.0.tar.gz"
+sha256 = "abaddfe3aeaa50139a2bf981b74cde0f3878847d71e13176e84f2f39359a2b1a"
 
 [[packages]]
 name = "imgui"
@@ -249,16 +291,46 @@ file = "packages/imgui-win32-1.91.9.tar.gz"
 sha256 = "c33b8e4ee31b17c9bd7f40eba710820dd3e712342ee33f87daa79d68ba6b39e0"
 
 [[packages]]
+name = "libcurl"
+version = "8.11.0"
+file = "packages/libcurl-8.11.0.tar.gz"
+sha256 = "cb8b9209ef3a59f3c6b6ba0522b3a33d9adba462d25bb10956b7290a06b18a57"
+
+[[packages]]
+name = "libpqxx"
+version = "7.9.2"
+file = "packages/libpqxx-7.9.2.tar.gz"
+sha256 = "dc68b30442a6393c38981ee78fd9849c844c8e269bdd3c47caddd73d1175e4a0"
+
+[[packages]]
 name = "lua"
 version = "5.4.7"
 file = "packages/lua-5.4.7.tar.gz"
 sha256 = "917f3daa98baa96c650bf15dae0edb44000f1c048a9feb16dc9026b395433c9e"
 
 [[packages]]
+name = "msgpack-c"
+version = "6.1.0"
+file = "packages/msgpack-c-6.1.0.tar.gz"
+sha256 = "af45bb250c9d702b88a51843384ce1c55a1f7f96d783908e7eaa44bf1ce2c039"
+
+[[packages]]
 name = "nlohmann_json"
 version = "3.11.3"
 file = "packages/nlohmann_json-3.11.3.tar.gz"
 sha256 = "edf5f470870fe6bf03a0a87f7a3d916640285aec2c6dc8d110eb97eee128b3b3"
+
+[[packages]]
+name = "openssl"
+version = "3.4.0"
+file = "packages/openssl-3.4.0.tar.gz"
+sha256 = "24ec6bebef1dc34d7562116f5adaf4c1f2a06d7b16cf5060c1b16d7ad7f7c749"
+
+[[packages]]
+name = "protobuf"
+version = "28.3"
+file = "packages/protobuf-28.3.tar.gz"
+sha256 = "b1b2d1ba5417e71725c2356a302071abe35bb4285cdc1c072f55c5c34bb16a26"
 
 [[packages]]
 name = "sdl2"
@@ -277,6 +349,12 @@ name = "sqlite3"
 version = "3.49.1"
 file = "packages/sqlite3-3.49.1.tar.gz"
 sha256 = "b5758d80ea20382a8a26f9d7fa01ed983678a9e23d862dc372ea3012771324ae"
+
+[[packages]]
+name = "sqlitecpp"
+version = "3.3.0"
+file = "packages/sqlitecpp-3.3.0.tar.gz"
+sha256 = "e062472748f08db20055b7e9ffb2edb8879678b696c1b7b553886d85682b9f0a"
 
 [[packages]]
 name = "stb-ds"
@@ -343,6 +421,12 @@ name = "tinyxml2"
 version = "11.0.0"
 file = "packages/tinyxml2-11.0.0.tar.gz"
 sha256 = "bd3f7e880e4bd326710aa375bf204d1b55ead1da6aec3c968d3b9a391d6a7f96"
+
+[[packages]]
+name = "tomlplusplus"
+version = "3.4.0"
+file = "packages/tomlplusplus-3.4.0.tar.gz"
+sha256 = "ef6227e2785eb410df2f00db35e339a2cb198a7b980dac01c401087c7f7d3a34"
 
 [[packages]]
 name = "yaml-cpp"
