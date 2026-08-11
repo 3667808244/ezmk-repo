@@ -126,7 +126,7 @@ sha256 = "88a826702cd1ea83fe0e2964462b95341d11c6b70a8ded3e380e4b9727b1f224"
 name = "catch2"
 version = "3.6.0"
 file = "packages/catch2-3.6.0.tar.gz"
-sha256 = "25420401b793e29fcde929a1eef3ef545e218b1a60c4dfac8006e9095afcb4e9"
+sha256 = "24a422ab52accd8a0bf531fa6a88d20fd1c04646f058aef1e3a8401b7a310803"
 
 [[packages]]
 name = "cli11"
