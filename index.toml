@@ -132,7 +132,7 @@ sha256 = "24a422ab52accd8a0bf531fa6a88d20fd1c04646f058aef1e3a8401b7a310803"
 name = "cereal"
 version = "1.3.2"
 file = "packages/cereal-1.3.2.tar.gz"
-sha256 = "7aab60c9f0ecb7696d926dcef52fa5be5c35b57525efb290ae660b2f53ff55ee"
+sha256 = "e76a2e8d86592524d4970b15dea516cd7f09ecaecdbee592f3308967e549617e"
 
 [[packages]]
 name = "cli11"
@@ -150,7 +150,7 @@ sha256 = "6c06b687700ee0f5804cfabdc3aa4ae681fbde567e6c0dd14e22a8f7f9dcde77"
 name = "doctest"
 version = "2.5.3"
 file = "packages/doctest-2.5.3.tar.gz"
-sha256 = "583e910505c1ae1a608ed6b86aa7ba01839a58274cfa37f169182c37b63247a4"
+sha256 = "39cfde10aa119a22aed02a5bd9f3ec75d501bc50651fef43e63b903e4d2d842b"
 
 [[packages]]
 name = "eigen"
@@ -180,7 +180,7 @@ sha256 = "3cff228e33a7123e0f4a5337cf0429ef7fab73ed4fac23c41ddf06e3e4ea5a83"
 name = "glm"
 version = "1.0.3"
 file = "packages/glm-1.0.3.tar.gz"
-sha256 = "996320d69221e86af2dd5751d6fa56fdc3f9f60353e8f113af46f7c11d8535d6"
+sha256 = "3f225c30b6b4c3ce9cf6227f23b143eb6d514fd01a6f577be41a1940d300f2f9"
 
 [[packages]]
 name = "googletest"
@@ -330,7 +330,7 @@ sha256 = "917f3daa98baa96c650bf15dae0edb44000f1c048a9feb16dc9026b395433c9e"
 name = "magic_enum"
 version = "0.9.8"
 file = "packages/magic_enum-0.9.8.tar.gz"
-sha256 = "62f6d95e70b7d4ff3ffdd46d1edf7cadea7a4fa160b3a9f6a91341cacb20b4ec"
+sha256 = "ee3d27632d94266e0ec0777e1111abf875bb42087fd45f4912b764f025426bc5"
 
 [[packages]]
 name = "msgpack-c"
@@ -348,7 +348,7 @@ sha256 = "edf5f470870fe6bf03a0a87f7a3d916640285aec2c6dc8d110eb97eee128b3b3"
 name = "rapidjson"
 version = "1.1.0"
 file = "packages/rapidjson-1.1.0.tar.gz"
-sha256 = "1cd23cbb2262f3d6ff3a6de010cbf15e50913ae50c0a810499d3f20e601a2aee"
+sha256 = "b1b9a308603bc160d5e14b63086f56fe805eb1b87d074810ea66cd3a7a77d699"
 
 [[packages]]
 name = "openssl"
