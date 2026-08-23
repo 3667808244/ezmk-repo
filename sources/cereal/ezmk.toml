@@ -1,0 +1,9 @@
+[project]
+name = "cereal"
+type = "static"
+version = "1.3.2"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

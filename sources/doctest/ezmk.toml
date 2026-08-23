@@ -1,0 +1,9 @@
+[project]
+name = "doctest"
+type = "static"
+version = "2.5.3"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

@@ -1,0 +1,9 @@
+[project]
+name = "rapidjson"
+type = "static"
+version = "1.1.0"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

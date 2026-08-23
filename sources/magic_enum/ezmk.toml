@@ -1,0 +1,9 @@
+[project]
+name = "magic_enum"
+type = "static"
+version = "0.9.8"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
