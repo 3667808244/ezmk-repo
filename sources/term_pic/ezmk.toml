@@ -1,0 +1,12 @@
+[project]
+name = "term_pic"
+type = "static"
+version = "0.1.2"
+language = "C++23"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+
+[depends]
+lib = []

@@ -1,0 +1,12 @@
+[project]
+name = "vt100_utils"
+type = "static"
+version = "0.1.0"
+language = "C++11"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]
+
+[depends]
+lib = []

@@ -470,3 +470,15 @@ version = "1.3.1"
 file = "packages/zlib-1.3.1.tar.gz"
 sha256 = "ccf232f99051c907a8dd1c2858509f473d8b3e60f8d125939252ea8e6d0ca2e8"
 
+
+[[packages]]
+name = "term_pic"
+version = "0.1.2"
+file = "packages/term_pic-0.1.2.tar.gz"
+sha256 = "c8ad300676c3fc4d0f3202a7d6e93316ad9f5fba969a416659b21b29cd2e7225"
+
+[[packages]]
+name = "vt100_utils"
+version = "0.1.0"
+file = "packages/vt100_utils-0.1.0.tar.gz"
+sha256 = "6e25c461fa49d4fe39523190298e1815e3be5fd9177e649d097ebb0212c0b3b0"
