@@ -482,3 +482,9 @@ name = "vt100_utils"
 version = "0.1.0"
 file = "packages/vt100_utils-0.1.0.tar.gz"
 sha256 = "6e25c461fa49d4fe39523190298e1815e3be5fd9177e649d097ebb0212c0b3b0"
+
+[[packages]]
+name = "vt100_utils"
+version = "0.2.0"
+file = "packages/vt100_utils-0.2.0.tar.gz"
+sha256 = "aae54450ab72f5b18a6444e5c710b4a84fd9dad24880ba5b4f944ce612764e06"
