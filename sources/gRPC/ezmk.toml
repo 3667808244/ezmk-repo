@@ -1,7 +1,7 @@
 ﻿[project]
 name = "gRPC"
 type = "static"
-version = "1.68.0"
+version = "1.84.0"
 language = "C++17"
 precompiled = true
 
@@ -10,4 +10,4 @@ include_dirs = ["include"]
 flags = []
 
 [depends]
-lib = ["protobuf", "openssl"]
+lib = ["protobuf", "openssl", "zlib"]

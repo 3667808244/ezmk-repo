@@ -17,6 +17,8 @@
 #include <grpc/support/port_platform.h>
 #include <stddef.h>
 
+#include <string>
+
 #include "absl/strings/string_view.h"
 
 namespace grpc_event_engine {
@@ -55,11 +57,11 @@ class MemoryRequest {
   template <typename Sink>
   friend void AbslStringify(Sink& s, const MemoryRequest& r) {
     if (r.min_ == r.max_) {
-      s.Append(r.min_);
+      s.Append(std::to_string(r.min_));
     } else {
-      s.Append(r.min_);
+      s.Append(std::to_string(r.min_));
       s.Append("..");
-      s.Append(r.max_);
+      s.Append(std::to_string(r.max_));
     }
   }
 

@@ -42,7 +42,7 @@ lib = ["hello-lib"]
 | `glfw` | 3.5.1 | static | C11 | 跨平台窗口/输入/OpenGL 上下文库 |
 | `glm` | 1.0.3 | static | C++17 | OpenGL Mathematics（GLSL 风格数学库） |
 | `googletest` | 1.18.0 | static | C++17 | GoogleTest + GoogleMock C++ 测试框架 |
-| `gRPC` | 1.68.0 | static (precompiled) | C++17 | 高性能 RPC 框架（预编译，linux-x64） |
+| `gRPC` | 1.84.0 | static (precompiled) | C++17 | 高性能 RPC 框架（预编译，linux-x64） |
 | `hello-lib` | 0.1.0 | static | C++17 | 最小示例静态库 |
 | `hiredis` | 1.4.1 | static | C11 | Redis 的极简 C 客户端 |
 | `libcurl` | 8.22.0 | static (precompiled) | C11 | 多协议文件传输库（预编译，linux-x64） |

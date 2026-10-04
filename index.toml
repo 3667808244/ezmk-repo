@@ -208,9 +208,9 @@ sha256 = "390cd8edb628503f27f705c0cc78060ffcc5487cef93c6b1b076fead4b4beb3c"
 
 [[packages]]
 name = "gRPC"
-version = "1.68.0"
-file = "packages/gRPC-1.68.0.tar.gz"
-sha256 = "cd6a19c10265de6652169fe11e1e0e04574edd7ebe43c593aff8145699b819af"
+version = "1.84.0"
+file = "packages/gRPC-1.84.0.tar.gz"
+sha256 = "989cd76dc4548d9a647a5bb4e0487219088d8abeac6a4b155f33a92e5e3f2cd4"
 
 [[packages]]
 name = "hello-lib"
