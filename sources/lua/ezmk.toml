@@ -1,7 +1,7 @@
 [project]
 name = "lua"
 type = "static"
-version = "5.4.7"
+version = "5.5.1"
 language = "C99"
 
 [compile]

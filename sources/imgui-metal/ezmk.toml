@@ -1,7 +1,7 @@
 [project]
 name = "imgui-metal"
 type = "static"
-version = "1.91.9"
+version = "1.92.9"
 language = "C++17"
 
 [compile]

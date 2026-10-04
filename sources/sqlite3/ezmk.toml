@@ -1,7 +1,7 @@
 ﻿[project]
 name = "sqlite3"
 type = "static"
-version = "3.49.1"
+version = "3.53.4"
 language = "C99"
 
 [compile]

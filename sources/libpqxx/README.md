@@ -2,7 +2,7 @@
 
 Official C++ client API for PostgreSQL
 
-- **Version**: 7.9.2
+- **Version**: 8.0.2
 - **Type**: source
 - **Source**: https://github.com/jtv/libpqxx
 

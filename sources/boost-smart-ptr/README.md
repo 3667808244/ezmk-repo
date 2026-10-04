@@ -2,7 +2,7 @@
 
 Boost.smart_ptr 鈥?Smart pointers (shared_ptr/intrusive_ptr/local_shared_ptr)
 
-- **Version**: 1.88.0 (Boost release)
+- **Version**: 1.92.0 (Boost release)
 - **License**: Boost Software License 1.0
 - **Type**: Header-only
 - **Source**: [boostorg/smart_ptr](https://github.com/boostorg/smart_ptr)

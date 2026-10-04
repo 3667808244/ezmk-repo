@@ -2,7 +2,7 @@
 
 Boost.functional 鈥?Function object adapters (hash/bind/function)
 
-- **Version**: 1.88.0 (Boost release)
+- **Version**: 1.92.0 (Boost release)
 - **License**: Boost Software License 1.0
 - **Type**: Header-only
 - **Source**: [boostorg/functional](https://github.com/boostorg/functional)

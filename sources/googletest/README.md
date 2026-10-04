@@ -2,7 +2,7 @@
 
 GoogleTest + GoogleMock C++ testing framework
 
-- **Version**: 1.15.2
+- **Version**: 1.18.0
 - **Type**: source
 - **Source**: https://github.com/google/googletest
 

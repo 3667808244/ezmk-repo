@@ -1,7 +1,7 @@
 [project]
 name = "fmt"
 type = "static"
-version = "10.2.1"
+version = "12.2.0"
 language = "C++17"
 
 [compile]

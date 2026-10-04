@@ -2,7 +2,7 @@
 
 Minimalistic C client for Redis
 
-- **Version**: 1.2.0
+- **Version**: 1.4.1
 - **Type**: source
 - **Source**: https://github.com/redis/hiredis
 

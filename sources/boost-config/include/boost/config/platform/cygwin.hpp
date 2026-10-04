@@ -59,9 +59,13 @@
 // boilerplate code:
 #include <boost/config/detail/posix_features.hpp>
 
-#if (CYGWIN_VERSION_API_MAJOR == 0 && CYGWIN_VERSION_API_MINOR < 325)
-// Prior to CYGWIN_VERSION_API_MINOR=325 Cygwin lies about XSI conformance, there is no nl_types.h:
+//
+// Cygwin lies about XSI conformance, there is no nl_types.h:
+//
 #ifdef BOOST_HAS_NL_TYPES_H
 #  undef BOOST_HAS_NL_TYPES_H
 #endif
-#endif
+
+
+
+

@@ -1,0 +1,9 @@
+[project]
+name = "fmt"
+type = "static"
+version = "10.2.1"
+language = "C++17"
+
+[compile]
+include_dirs = ["include"]
+src_dirs = ["src"]

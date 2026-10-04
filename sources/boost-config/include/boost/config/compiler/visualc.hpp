@@ -115,12 +115,6 @@
 #define BOOST_DEPRECATED(msg) __declspec(deprecated)
 #endif
 
-// __builtin_launder intrinsic
-//The intrinsic is only available in C++17 or later mode
-#if (_MSC_VER >= 1910) && defined(_MSVC_LANG) && (_MSVC_LANG > 201402L)
-# define BOOST_HAS_BUILTIN_LAUNDER
-#endif
-
 //
 // TR1 features:
 //
@@ -283,7 +277,7 @@
 #if !defined(BOOST_NO_SFINAE_EXPR) && !defined(_MSVC_LANG)
 #  define BOOST_NO_SFINAE_EXPR
 #endif
-#if !defined(BOOST_NO_CXX11_REF_QUALIFIERS) && !defined(_MSVC_LANG)
+#ifndef BOOST_NO_CXX11_REF_QUALIFIERS
 #  define BOOST_NO_CXX11_REF_QUALIFIERS
 #endif
 #endif
@@ -316,7 +310,6 @@
 
 #if BOOST_CXX_VERSION >= 201703L
 #  define BOOST_ATTRIBUTE_UNUSED [[maybe_unused]]
-#  define BOOST_FALLTHROUGH [[fallthrough]]
 #endif
 
 #ifndef BOOST_COMPILER

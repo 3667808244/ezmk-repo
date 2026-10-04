@@ -3,7 +3,7 @@
  * @ingroup SQLiteCpp
  * @brief   A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result.
  *
- * Copyright (c) 2012-2023 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+ * Copyright (c) 2012-2026 Sebastien Rombauts (sebastien.rombauts@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -111,8 +111,8 @@ void Statement::bind(const int aIndex, const double aValue)
 // Bind a string value to a parameter "?", "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement
 void Statement::bind(const int aIndex, const std::string& aValue)
 {
-    const int ret = sqlite3_bind_text(getPreparedStatement(), aIndex, aValue.c_str(),
-                                      static_cast<int>(aValue.size()), SQLITE_TRANSIENT);
+    const int ret = sqlite3_bind_text64(getPreparedStatement(), aIndex, aValue.c_str(),
+                                        static_cast<sqlite3_uint64>(aValue.size()), SQLITE_TRANSIENT, SQLITE_UTF8);
     check(ret);
 }
 
@@ -130,11 +130,19 @@ void Statement::bind(const int aIndex, const void* apValue, const int aSize)
     check(ret);
 }
 
+// Bind a binary blob using a 64-bit size and SQLITE_TRANSIENT
+void Statement::bind64(const int aIndex, const void* apValue, const uint64_t aSize)
+{
+    const int ret = sqlite3_bind_blob64(getPreparedStatement(), aIndex, apValue,
+                                        static_cast<sqlite3_uint64>(aSize), SQLITE_TRANSIENT);
+    check(ret);
+}
+
 // Bind a string value to a parameter "?", "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement
 void Statement::bindNoCopy(const int aIndex, const std::string& aValue)
 {
-    const int ret = sqlite3_bind_text(getPreparedStatement(), aIndex, aValue.c_str(),
-                                      static_cast<int>(aValue.size()), SQLITE_STATIC);
+    const int ret = sqlite3_bind_text64(getPreparedStatement(), aIndex, aValue.c_str(),
+                                        static_cast<sqlite3_uint64>(aValue.size()), SQLITE_STATIC, SQLITE_UTF8);
     check(ret);
 }
 
@@ -149,6 +157,14 @@ void Statement::bindNoCopy(const int aIndex, const char* apValue)
 void Statement::bindNoCopy(const int aIndex, const void* apValue, const int aSize)
 {
     const int ret = sqlite3_bind_blob(getPreparedStatement(), aIndex, apValue, aSize, SQLITE_STATIC);
+    check(ret);
+}
+
+// Bind a binary blob using a 64-bit size and SQLITE_STATIC
+void Statement::bindNoCopy64(const int aIndex, const void* apValue, const uint64_t aSize)
+{
+    const int ret = sqlite3_bind_blob64(getPreparedStatement(), aIndex, apValue,
+                                        static_cast<sqlite3_uint64>(aSize), SQLITE_STATIC);
     check(ret);
 }
 
@@ -286,7 +302,10 @@ int Statement::getColumnIndex(const char* apName) const
         for (int i = 0; i < mColumnCount; ++i)
         {
             const char* pName = sqlite3_column_name(getPreparedStatement(), i);
-            mColumnNames[pName] = i;
+            if (pName)
+            {
+                mColumnNames[pName] = i;
+            }
         }
     }
 
@@ -349,10 +368,53 @@ std::string Statement::getExpandedSQL() const {
     throw SQLite::Exception("this version of SQLiteCpp does not support expanded SQL");
     #else
     char* expanded = sqlite3_expanded_sql(getPreparedStatement());
-    std::string expandedString(expanded);
+    std::string expandedString(expanded ? expanded : "");
     sqlite3_free(expanded);
     return expandedString;
     #endif
+}
+
+Statement::RowIterator::RowIterator(Statement* apStatement): mpStatement(apStatement)
+{}
+
+Statement::RowIterator& Statement::RowIterator::operator++()
+{
+    if (!mpStatement->executeStep())
+        mpStatement = nullptr;
+    return *this;
+}
+
+void Statement::RowIterator::operator++(int)
+{
+    ++(*this);
+}
+
+bool Statement::RowIterator::operator==(const RowIterator& aOther) const
+{
+    return mpStatement == aOther.mpStatement;
+}
+
+bool Statement::RowIterator::operator!=(const RowIterator& aOther) const
+{
+    return !this->operator==(aOther);
+}
+
+Statement& Statement::RowIterator::operator*() const
+{
+    return *mpStatement;
+}
+
+Statement::RowIterator Statement::begin()
+{
+    reset();
+    if (executeStep())
+        return RowIterator { this };
+    return RowIterator { nullptr };
+}
+
+Statement::RowIterator Statement::end()
+{
+    return RowIterator{ nullptr };
 }
 
 

@@ -5,7 +5,7 @@
  *
  * Include this main header file in your project to gain access to all functionality provided by the wrapper.
  *
- * Copyright (c) 2012-2023 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+ * Copyright (c) 2012-2026 Sebastien Rombauts (sebastien.rombauts@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -41,6 +41,6 @@
  *
  * WARNING: shall always be updated in sync with PROJECT_VERSION in CMakeLists.txt
  */
-#define SQLITECPP_VERSION           "3.03.00"   // 3.3.0
-#define SQLITECPP_VERSION_NUMBER     3003000    // 3.3.0
+#define SQLITECPP_VERSION           "3.04.00"   // 3.4.0
+#define SQLITECPP_VERSION_NUMBER     3004000    // 3.4.0
 

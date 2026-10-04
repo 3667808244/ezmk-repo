@@ -2,7 +2,7 @@
 
 Boost.mp11 鈥?C++11 metaprogramming library
 
-- **Version**: 1.87.0 (Boost release)
+- **Version**: 1.92.0 (Boost release)
 - **License**: Boost Software License 1.0
 - **Type**: Header-only
 - **Source**: [boostorg/mp11](https://github.com/boostorg/mp11)

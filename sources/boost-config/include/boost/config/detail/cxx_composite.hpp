@@ -1,4 +1,4 @@
-//  This file was automatically generated on Sat Jul 11 16:20:44 2026
+//  This file was automatically generated on Mon Sep 22 20:16:25 2025
 //  by libs/config/tools/generate.cpp
 //  Copyright John Maddock 2002-21.
 //  Use, modification and distribution are subject to the 
@@ -180,7 +180,6 @@
    || defined(BOOST_NO_CXX17_ITERATOR_TRAITS)\
    || defined(BOOST_NO_CXX17_STD_APPLY)\
    || defined(BOOST_NO_CXX17_STD_INVOKE)\
-   || defined(BOOST_NO_CXX17_STD_LAUNDER)\
    || defined(BOOST_NO_CXX17_STRUCTURED_BINDINGS)
 #    define BOOST_NO_CXX17
 #endif
@@ -215,18 +214,5 @@
    || defined(BOOST_NO_CXX23_HDR_STACKTRACE)\
    || defined(BOOST_NO_CXX23_HDR_STDFLOAT)
 #    define BOOST_NO_CXX23
-#endif
-
-#if defined(BOOST_NO_CXX23)\
-   || defined(BOOST_NO_CXX26_HDR_CONTRACTS)\
-   || defined(BOOST_NO_CXX26_HDR_DEBUGGING)\
-   || defined(BOOST_NO_CXX26_HDR_HAZARD_POINTER)\
-   || defined(BOOST_NO_CXX26_HDR_HIVE)\
-   || defined(BOOST_NO_CXX26_HDR_INPLACE_VECTOR)\
-   || defined(BOOST_NO_CXX26_HDR_LINALG)\
-   || defined(BOOST_NO_CXX26_HDR_RCU)\
-   || defined(BOOST_NO_CXX26_HDR_SIMD)\
-   || defined(BOOST_NO_CXX26_HDR_TEXT_ENCODING)
-#    define BOOST_NO_CXX26
 #endif
 

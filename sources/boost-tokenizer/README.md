@@ -2,7 +2,7 @@
 
 Boost.tokenizer 鈥?String tokenizer / splitter
 
-- **Version**: 1.88.0 (Boost release)
+- **Version**: 1.92.0 (Boost release)
 - **License**: Boost Software License 1.0
 - **Type**: Header-only
 - **Source**: [boostorg/tokenizer](https://github.com/boostorg/tokenizer)

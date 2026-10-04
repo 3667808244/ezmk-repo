@@ -193,9 +193,6 @@
 #if !defined(_CPPLIB_VER) || (_CPPLIB_VER < 650) || !defined(_HAS_CXX17) || (_HAS_CXX17 == 0) || !defined(_MSVC_STL_UPDATE) || (_MSVC_STL_UPDATE < 201709)
 #  define BOOST_NO_CXX17_STD_INVOKE
 #endif
-#if !defined(_CPPLIB_VER) || (_CPPLIB_VER < 650) || !defined(_HAS_CXX17) || (_HAS_CXX17 == 0) || !defined(_MSVC_STL_VERSION) || (_MSVC_STL_VERSION < 141)
-#  define BOOST_NO_CXX17_STD_LAUNDER
-#endif
 
 // C++20 features which aren't configured in suffix.hpp correctly:
 #if !defined(_MSVC_STL_UPDATE) || (_MSVC_STL_UPDATE < 202008L) || !defined(_HAS_CXX20) || (_HAS_CXX20 == 0)
@@ -257,7 +254,7 @@
 
 //
 // Things not supported by the CLR:
-#if defined(_M_CEE) && (_MSC_VER < 1951)
+#ifdef _M_CEE
 #ifndef BOOST_NO_CXX11_HDR_MUTEX
 #  define BOOST_NO_CXX11_HDR_MUTEX
 #endif
@@ -279,14 +276,10 @@
 #ifndef BOOST_NO_CXX14_STD_EXCHANGE
 #  define BOOST_NO_CXX14_STD_EXCHANGE
 #endif
-#endif
-
-#if defined(_M_CEE)
 #ifndef BOOST_NO_FENV_H
 #  define BOOST_NO_FENV_H
 #endif
 #endif
-
 
 #ifdef _CPPLIB_VER
 #  define BOOST_DINKUMWARE_STDLIB _CPPLIB_VER

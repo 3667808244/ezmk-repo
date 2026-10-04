@@ -2,7 +2,7 @@
 
 C++ template library for linear algebra: matrices, vectors, numerical solvers
 
-- **Version**: 3.4.0
+- **Version**: 5.0.1
 - **Type**: header_only
 - **Source**: https://gitlab.com/libeigen/eigen
 

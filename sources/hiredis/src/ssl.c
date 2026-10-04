@@ -34,6 +34,9 @@
 #include "async.h"
 #include "net.h"
 
+#include <openssl/ssl.h>
+#include <openssl/err.h>
+
 #include <assert.h>
 #include <errno.h>
 #include <string.h>
@@ -51,9 +54,6 @@
 #else
 #include <pthread.h>
 #endif
-
-#include <openssl/ssl.h>
-#include <openssl/err.h>
 
 #include "win32.h"
 #include "async_private.h"
@@ -167,8 +167,8 @@ static int initOpensslLocks(void) {
 
 int redisInitOpenSSL(void)
 {
-    SSL_library_init();
 #ifdef HIREDIS_USE_CRYPTO_LOCKS
+    SSL_library_init();
     initOpensslLocks();
 #endif
 
@@ -288,7 +288,7 @@ redisSSLContext *redisCreateSSLContextWithOptions(redisSSLOptions *options, redi
     if (capath || cacert_filename) {
 #ifdef _WIN32
         if (0 == strcmp(cacert_filename, "wincert")) {
-            win_store = CertOpenSystemStore(NULL, "Root");
+            win_store = CertOpenSystemStore(0, "Root");
             if (!win_store) {
                 if (error) *error = REDIS_SSL_CTX_OS_CERTSTORE_OPEN_FAILED;
                 goto error;
@@ -364,7 +364,6 @@ static int redisSSLConnect(redisContext *c, SSL *ssl) {
         return REDIS_ERR;
     }
 
-    c->funcs = &redisContextSSLFuncs;
     rssl->ssl = ssl;
 
     SSL_set_mode(rssl->ssl, SSL_MODE_ACCEPT_MOVING_WRITE_BUFFER);
@@ -372,15 +371,19 @@ static int redisSSLConnect(redisContext *c, SSL *ssl) {
     SSL_set_connect_state(rssl->ssl);
 
     ERR_clear_error();
+
     int rv = SSL_connect(rssl->ssl);
     if (rv == 1) {
+        c->funcs = &redisContextSSLFuncs;
         c->privctx = rssl;
         return REDIS_OK;
     }
 
     rv = SSL_get_error(rssl->ssl, rv);
     if (((c->flags & REDIS_BLOCK) == 0) &&
-        (rv == SSL_ERROR_WANT_READ || rv == SSL_ERROR_WANT_WRITE)) {
+        (rv == SSL_ERROR_WANT_READ || rv == SSL_ERROR_WANT_WRITE))
+    {
+        c->funcs = &redisContextSSLFuncs;
         c->privctx = rssl;
         return REDIS_OK;
     }

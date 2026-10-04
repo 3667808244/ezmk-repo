@@ -1,7 +1,7 @@
 ﻿[project]
 name = "eigen"
 type = "static"
-version = "3.4.0"
+version = "5.0.1"
 language = "C++17"
 header_only = true
 

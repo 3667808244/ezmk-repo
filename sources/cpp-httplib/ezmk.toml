@@ -1,7 +1,7 @@
 ﻿[project]
 name = "cpp-httplib"
 type = "static"
-version = "0.18.3"
+version = "0.59.0"
 language = "C++11"
 header_only = true
 

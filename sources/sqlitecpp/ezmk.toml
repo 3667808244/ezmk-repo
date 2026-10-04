@@ -1,7 +1,7 @@
 ﻿[project]
 name = "sqlitecpp"
 type = "static"
-version = "3.3.0"
+version = "3.4.0"
 language = "C++17"
 
 [compile]

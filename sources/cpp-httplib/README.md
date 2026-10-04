@@ -2,7 +2,7 @@
 
 C++11 single-header HTTP/HTTPS client and server library
 
-- **Version**: 0.18.3
+- **Version**: 0.59.0
 - **Type**: header_only
 - **Source**: https://github.com/yhirose/cpp-httplib
 - **Optional dependencies**: openssl

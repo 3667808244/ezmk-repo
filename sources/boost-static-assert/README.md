@@ -2,7 +2,7 @@
 
 Boost.static_assert 鈥?Compile-time assertions (BOOST_STATIC_ASSERT)
 
-- **Version**: 1.87.0 (Boost release)
+- **Version**: 1.92.0 (Boost release)
 - **License**: Boost Software License 1.0
 - **Type**: Header-only
 - **Source**: [boostorg/static_assert](https://github.com/boostorg/static_assert)

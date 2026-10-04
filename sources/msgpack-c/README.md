@@ -2,7 +2,7 @@
 
 MessagePack binary serialization (header-only mode)
 
-- **Version**: 6.1.0
+- **Version**: 7.0.2
 - **Type**: header_only
 - **Source**: https://github.com/msgpack/msgpack-c
 

@@ -4,487 +4,523 @@ description = "EazyMake official package repository"
 
 [[packages]]
 name = "boost-algorithm"
-version = "1.88.0"
-file = "packages/boost-algorithm-1.88.0.tar.gz"
-sha256 = "059c4f4585f51c84b556eca276918c2be15f7f529a8cc6bfb7ddfe8374fea7a7"
+version = "1.92.0"
+file = "packages/boost-algorithm-1.92.0.tar.gz"
+sha256 = "bce61c5066d41608729d8826076ca5bf09553b08ec5893c159096fa70c79ee48"
 
 [[packages]]
 name = "boost-asio"
-version = "1.88.0"
-file = "packages/boost-asio-1.88.0.tar.gz"
-sha256 = "481ceb33b97962392d9fd4abe5cfcef3929240fc1c59e5657994e7545133a004"
+version = "1.92.0"
+file = "packages/boost-asio-1.92.0.tar.gz"
+sha256 = "71ee0a0c4f75d54f11750f2ad135bc895d2a64881f4d7f8a09ac33e389a4e1e1"
 
 [[packages]]
 name = "boost-assert"
-version = "1.88.0"
-file = "packages/boost-assert-1.88.0.tar.gz"
-sha256 = "70aa590abaf764979a9734a8bd116306be0736912d5ea891c21dd412d4eaa77d"
+version = "1.92.0"
+file = "packages/boost-assert-1.92.0.tar.gz"
+sha256 = "93b6e282bc4f0c84ef7702cf40dd079c480f8386656603ef3fb91523030c7ad9"
 
 [[packages]]
 name = "boost-beast"
-version = "1.88.0"
-file = "packages/boost-beast-1.88.0.tar.gz"
-sha256 = "c7ce91a15cb5964e31b0981a38679fa02642fb58e2a1df966793408090d61d77"
+version = "1.92.0"
+file = "packages/boost-beast-1.92.0.tar.gz"
+sha256 = "c020fbc43517d410a380b62160571f1311b659c7c782aabdcfba69e7dbcf28be"
 
 [[packages]]
 name = "boost-config"
-version = "1.88.0"
-file = "packages/boost-config-1.88.0.tar.gz"
-sha256 = "ecd17c7a23eddfdf969c76ccce8248dc198966f5b99d72b9faa18a34449d92d3"
+version = "1.92.0"
+file = "packages/boost-config-1.92.0.tar.gz"
+sha256 = "5c3b431fc0895e194dad33a6bb57dd189359ab9c46db855c34bfddb6eaf54e11"
 
 [[packages]]
 name = "boost-core"
-version = "1.88.0"
-file = "packages/boost-core-1.88.0.tar.gz"
-sha256 = "0d075c58f70820c4823eafd114a755b686f950fb145e34e952adba5a1a4d9e7b"
+version = "1.92.0"
+file = "packages/boost-core-1.92.0.tar.gz"
+sha256 = "57edea000f570ed98630c6cd1b087ff0534f4d01869077a3cf75021fd36a0c03"
 
 [[packages]]
 name = "boost-filesystem"
-version = "1.88.0"
-file = "packages/boost-filesystem-1.88.0.tar.gz"
-sha256 = "9907000455a48c686521c4c89a83cba1a5d1b996d8e71424df8c65152be16ef3"
+version = "1.92.0"
+file = "packages/boost-filesystem-1.92.0.tar.gz"
+sha256 = "c2a4ff2bbc159b2398107db0087b7d6f136c85b14c083e2c27c188e66152af8f"
 
 [[packages]]
 name = "boost-functional"
-version = "1.88.0"
-file = "packages/boost-functional-1.88.0.tar.gz"
-sha256 = "e034157dceb4ef2342a5b631c3f2ea06c3e091fc877ffcd8eef76903d19c2c1b"
+version = "1.92.0"
+file = "packages/boost-functional-1.92.0.tar.gz"
+sha256 = "be6df4539f399cbca9bc6260451c4a193d66071528f6204dfbd399734e260f2c"
 
 [[packages]]
 name = "boost-lexical-cast"
-version = "1.88.0"
-file = "packages/boost-lexical-cast-1.88.0.tar.gz"
-sha256 = "1035ebe01d69031fabe9eafc0cffaff4cddd5074b9afc796b8e17b1992f63de0"
+version = "1.92.0"
+file = "packages/boost-lexical-cast-1.92.0.tar.gz"
+sha256 = "f0e3c9a1cceb7467915198f93fd3b6a719a57a48823df4b0e094c9a01b9c7f1a"
 
 [[packages]]
 name = "boost-math"
-version = "1.88.0"
-file = "packages/boost-math-1.88.0.tar.gz"
-sha256 = "287912dcf83deb355f2159d7276a84d044f44f3f06d6a842dba4b1f6c9e2bcb0"
+version = "1.92.0"
+file = "packages/boost-math-1.92.0.tar.gz"
+sha256 = "a41f5f141b4fa5c5d30d57347099cd3984ede976ea1a59b560a20f1efaafea85"
 
 [[packages]]
 name = "boost-mp11"
-version = "1.88.0"
-file = "packages/boost-mp11-1.88.0.tar.gz"
-sha256 = "17c33024116f414d07b03a4ba492668f7f7eea2931ee44bd1676aceb0246462e"
+version = "1.92.0"
+file = "packages/boost-mp11-1.92.0.tar.gz"
+sha256 = "5fd5f48b242ff604c79af86ede52de001694254a04631cc4659d80fa7fab0f1d"
 
 [[packages]]
 name = "boost-optional"
-version = "1.88.0"
-file = "packages/boost-optional-1.88.0.tar.gz"
-sha256 = "2c36ffbb1a4078ffa1f8268265de38ea1556d0b4d94fbea5efb72c277c587f35"
+version = "1.92.0"
+file = "packages/boost-optional-1.92.0.tar.gz"
+sha256 = "20d16f6e56f21002d62a575d0b31d4418e84b319183ff49bb190b244f7ec9891"
 
 [[packages]]
 name = "boost-random"
-version = "1.88.0"
-file = "packages/boost-random-1.88.0.tar.gz"
-sha256 = "ffd0c58b0f84256af3c29682c12dd5ab349a4394b02cd8e587edde79c710096f"
+version = "1.92.0"
+file = "packages/boost-random-1.92.0.tar.gz"
+sha256 = "63d9ac77cb92dca641bea895a11c64534a67cf05941324af75b2037fb60eea40"
 
 [[packages]]
 name = "boost-smart-ptr"
-version = "1.88.0"
-file = "packages/boost-smart-ptr-1.88.0.tar.gz"
-sha256 = "6f7ef7d7cec907e470d844d49a40069a42bf12eea9c4b9147c221de5284f041f"
+version = "1.92.0"
+file = "packages/boost-smart-ptr-1.92.0.tar.gz"
+sha256 = "92344a2fc27cf334e0df99da20049722514f9aaa4f4e8282a63c7163443b05ef"
 
 [[packages]]
 name = "boost-static-assert"
-version = "1.88.0"
-file = "packages/boost-static-assert-1.88.0.tar.gz"
-sha256 = "09882b10873f9920191734592245b859f1107817c98cb470f3f7459c84d0d1af"
+version = "1.92.0"
+file = "packages/boost-static-assert-1.92.0.tar.gz"
+sha256 = "55955186131f6f654196658e2ddbf2663eac16559048b41d601ffecdfc0a0da3"
 
 [[packages]]
 name = "boost-system"
-version = "1.88.0"
-file = "packages/boost-system-1.88.0.tar.gz"
-sha256 = "8bd9ae76c45cbe0d61878d858a8077c303f2d3790a505a68ba7803bf9b674bf8"
+version = "1.92.0"
+file = "packages/boost-system-1.92.0.tar.gz"
+sha256 = "8a0b76d6768f1d3d474b852bc931b89c4ba84fc736af925d2bcb40e7377daa96"
 
 [[packages]]
 name = "boost-throw-exception"
-version = "1.88.0"
-file = "packages/boost-throw-exception-1.88.0.tar.gz"
-sha256 = "9af11ebb61bd99447e7d9d5da25297aed22c7605a947329dc304b38f299d1039"
+version = "1.92.0"
+file = "packages/boost-throw-exception-1.92.0.tar.gz"
+sha256 = "a4245577121878ec82c2c3b5ccd8697fe43b48322cc80fe376eb2932eac34ccc"
 
 [[packages]]
 name = "boost-tokenizer"
-version = "1.88.0"
-file = "packages/boost-tokenizer-1.88.0.tar.gz"
-sha256 = "8bb568d1958c908c948165193360e6dfec01fd01b37e2249879256336132b06c"
+version = "1.92.0"
+file = "packages/boost-tokenizer-1.92.0.tar.gz"
+sha256 = "9997bd8f81244f9394399fc904a36e340531fdda54f174cce3b181049b4607ca"
 
 [[packages]]
 name = "boost-uuid"
-version = "1.88.0"
-file = "packages/boost-uuid-1.88.0.tar.gz"
-sha256 = "71c2336708c777d3ec13eb2ed316314dbb9d3aaa37acddd644b0abac028662dc"
+version = "1.92.0"
+file = "packages/boost-uuid-1.92.0.tar.gz"
+sha256 = "7ee9c82931bad75bbe89b3a54902ae4b10f89e276c8eaeffae3588cfaf6cd435"
 
 [[packages]]
 name = "boost-variant2"
-version = "1.88.0"
-file = "packages/boost-variant2-1.88.0.tar.gz"
-sha256 = "88a826702cd1ea83fe0e2964462b95341d11c6b70a8ded3e380e4b9727b1f224"
+version = "1.92.0"
+file = "packages/boost-variant2-1.92.0.tar.gz"
+sha256 = "c53f5cfc209049dbc367c04447b93f95e9929ed73cec16d9a0f7651993322d99"
 
 [[packages]]
 name = "catch2"
-version = "3.6.0"
-file = "packages/catch2-3.6.0.tar.gz"
-sha256 = "24a422ab52accd8a0bf531fa6a88d20fd1c04646f058aef1e3a8401b7a310803"
+version = "3.16.0"
+file = "packages/catch2-3.16.0.tar.gz"
+sha256 = "bdf2bc98fcd4cca05056dbced7c3042c85f78c14202425025c4d96d6905558cf"
 
 [[packages]]
 name = "cereal"
 version = "1.3.2"
 file = "packages/cereal-1.3.2.tar.gz"
-sha256 = "e76a2e8d86592524d4970b15dea516cd7f09ecaecdbee592f3308967e549617e"
+sha256 = "74c1248e8b64bee1d583c7dc6c2910f79bd9c05b40bbb6f0c7fba1f6c7ffebac"
 
 [[packages]]
 name = "cli11"
 version = "2.5.0"
 file = "packages/cli11-2.5.0.tar.gz"
-sha256 = "70b95a0c1913d69ca39ba12fba50c4e646844f5afca38126e87f80648266ecd7"
+sha256 = "f96b27865c65697198c1aa1e7886cb0d94f26661ea0aaaa88245dd7013004a5c"
+
+[[packages]]
+name = "cpp-httplib"
+version = "0.59.0"
+file = "packages/cpp-httplib-0.59.0.tar.gz"
+sha256 = "ee27e3639d132da2c07849295f8800ebe3e486be4cd5eec5f237289e198761bc"
 
 [[packages]]
 name = "cpp-httplib"
 version = "0.18.3"
 file = "packages/cpp-httplib-0.18.3.tar.gz"
-sha256 = "6c06b687700ee0f5804cfabdc3aa4ae681fbde567e6c0dd14e22a8f7f9dcde77"
+sha256 = "227ed7f24b72b7c05cced6a45acb2cc129ae04235d47bed5124e0ca6d0bf17fc"
 
 [[packages]]
 name = "doctest"
 version = "2.5.3"
 file = "packages/doctest-2.5.3.tar.gz"
-sha256 = "39cfde10aa119a22aed02a5bd9f3ec75d501bc50651fef43e63b903e4d2d842b"
+sha256 = "b535fa2bd1703fe0344e84da80873cafe891bb99373bf4a99414fbc569ec8da3"
+
+[[packages]]
+name = "eigen"
+version = "5.0.1"
+file = "packages/eigen-5.0.1.tar.gz"
+sha256 = "88b532929edc1fd7f708e71509b404a50469aa9c414d245b7f28e2bffa19c6e3"
 
 [[packages]]
 name = "eigen"
 version = "3.4.0"
 file = "packages/eigen-3.4.0.tar.gz"
-sha256 = "fd2ddc5aeaa21be3850d4f172a2d74c284a8452bdf86af49d05a07d9e976a9d2"
+sha256 = "f16e01792cb779ac1ed4ca3bbf5105c5bd5703198bed726896041491590fc275"
 
 [[packages]]
 name = "example-utils"
 version = "0.1.0"
 file = "packages/example-utils-0.1.0.tar.gz"
-sha256 = "aa18948c429e522206e530ec644d29e63a48be3baadad76977fcbf91bfc8ac0d"
+sha256 = "0736f555c9d21dc5b90f125c0528666c341ad8432d26053a2efcf6d613944a2e"
+
+[[packages]]
+name = "fmt"
+version = "12.2.0"
+file = "packages/fmt-12.2.0.tar.gz"
+sha256 = "9643f00d573d969cec1a15f5db4649765923b89d725e610ddaab3578f039137d"
 
 [[packages]]
 name = "fmt"
 version = "10.2.1"
 file = "packages/fmt-10.2.1.tar.gz"
-sha256 = "ed8794e6050df059fd792da96ae90edb78a781c4d69f81992ea675688a800e4c"
+sha256 = "4649caa3be098065821364fd01b75db5c870968ab23832452748a1506a99799f"
 
 [[packages]]
 name = "glfw"
-version = "3.4"
-file = "packages/glfw-3.4.tar.gz"
-sha256 = "3cff228e33a7123e0f4a5337cf0429ef7fab73ed4fac23c41ddf06e3e4ea5a83"
+version = "3.5.1"
+file = "packages/glfw-3.5.1.tar.gz"
+sha256 = "aa1a9435c8bd7f1c07bc1484a5e28eb578173c41b22b64637d796c14cf99816f"
 
 [[packages]]
 name = "glm"
 version = "1.0.3"
 file = "packages/glm-1.0.3.tar.gz"
-sha256 = "3f225c30b6b4c3ce9cf6227f23b143eb6d514fd01a6f577be41a1940d300f2f9"
+sha256 = "eb7570d2db51ab7ad4048efadf8ff4eb19bff355eeeae68c27da5462a6c77e77"
 
 [[packages]]
 name = "googletest"
-version = "1.15.2"
-file = "packages/googletest-1.15.2.tar.gz"
-sha256 = "e3482a4259dd7b58d0ebd5d0a0fb0ac36de1e2eb71f99a1add1e5ccd1822db3e"
+version = "1.18.0"
+file = "packages/googletest-1.18.0.tar.gz"
+sha256 = "390cd8edb628503f27f705c0cc78060ffcc5487cef93c6b1b076fead4b4beb3c"
 
 [[packages]]
 name = "gRPC"
 version = "1.68.0"
 file = "packages/gRPC-1.68.0.tar.gz"
-sha256 = "39010fd2ab3626e9cf13518b709094fe0f1dc953f57fa7035b466fec349f47e1"
+sha256 = "cd6a19c10265de6652169fe11e1e0e04574edd7ebe43c593aff8145699b819af"
 
 [[packages]]
 name = "hello-lib"
 version = "0.1.0"
 file = "packages/hello-lib-0.1.0.tar.gz"
-sha256 = "654a546676730072d0197e2ff05d7ab7760ebfc2e3bfba16bd93d22d0e5bc9a4"
+sha256 = "0d7f4cc48586ac39ac8b05fa1919db0816f5c59e3a1b36a29bbda4cab8689276"
 
 [[packages]]
 name = "hiredis"
-version = "1.2.0"
-file = "packages/hiredis-1.2.0.tar.gz"
-sha256 = "b076442c2a58abe71dd41f60bd2359186f8e41ffd8b117f1e708760b3a4b1ca0"
+version = "1.4.1"
+file = "packages/hiredis-1.4.1.tar.gz"
+sha256 = "e6908f028099ac5a36bbde48145732c4a821c73f5dea1d4eb8f8b3687b8bc043"
 
 [[packages]]
 name = "imgui"
-version = "1.91.9"
-file = "packages/imgui-1.91.9.tar.gz"
-sha256 = "3eabd04d5e252eda22c88e4f1502a68ac132371c23712153ae33ffc9f895bf34"
+version = "1.92.9"
+file = "packages/imgui-1.92.9.tar.gz"
+sha256 = "3f371266291a0ccb661e10a8b3aae44da82f18a99b9238729b3fffde5f10811a"
 
 [[packages]]
 name = "imgui-android"
-version = "1.91.9"
-file = "packages/imgui-android-1.91.9.tar.gz"
-sha256 = "5e35c21ca306f49ec6842d95bc8265033c06037f7ebd185e2659f53f371ae52a"
+version = "1.92.9"
+file = "packages/imgui-android-1.92.9.tar.gz"
+sha256 = "8d2efc165ba1881fd4e0421bba1c97d6a719a63b8465f4f27d0b48dd81cd91b3"
 
 [[packages]]
 name = "imgui-dx10"
-version = "1.91.9"
-file = "packages/imgui-dx10-1.91.9.tar.gz"
-sha256 = "055826766a84207e95c20de9118c381597871f25842e28faba0f42d1de71606c"
+version = "1.92.9"
+file = "packages/imgui-dx10-1.92.9.tar.gz"
+sha256 = "5b1f858b9b53e441ae82652f423274b045a81dba0b682e4f8dcb2324bc5831dc"
 
 [[packages]]
 name = "imgui-dx11"
-version = "1.91.9"
-file = "packages/imgui-dx11-1.91.9.tar.gz"
-sha256 = "0ef8f4ceaadd1b5d4eb7fb33b8cc9bfce09d2cb23e3a764d296db4bbf532bee9"
+version = "1.92.9"
+file = "packages/imgui-dx11-1.92.9.tar.gz"
+sha256 = "838f755f284f001a71115c1129bf329e15e8334ca508292e45891c27edf0df13"
 
 [[packages]]
 name = "imgui-dx12"
-version = "1.91.9"
-file = "packages/imgui-dx12-1.91.9.tar.gz"
-sha256 = "68ddcf1f892c208dfdd210e9e4f8bdaedf8f233efa823b6d32b5d546e6540964"
+version = "1.92.9"
+file = "packages/imgui-dx12-1.92.9.tar.gz"
+sha256 = "0ea583834c1cbe1506949108b31083207bbed270d9a7114eccce6de64b62a104"
 
 [[packages]]
 name = "imgui-dx9"
-version = "1.91.9"
-file = "packages/imgui-dx9-1.91.9.tar.gz"
-sha256 = "f1c69fb290da2923cb4082b11b12933e1eebc05a564819e47b9daa75f6b01f76"
+version = "1.92.9"
+file = "packages/imgui-dx9-1.92.9.tar.gz"
+sha256 = "3684a902d8cd5ad26e1bb084f9463f9658b49e4794f3ac91928267422f69d52e"
 
 [[packages]]
 name = "imgui-glfw"
-version = "1.91.9"
-file = "packages/imgui-glfw-1.91.9.tar.gz"
-sha256 = "f78c14b1a38cd81ef1405aaa7e82bfbb925154f54021e837990142d5c65469a2"
+version = "1.92.9"
+file = "packages/imgui-glfw-1.92.9.tar.gz"
+sha256 = "7c889acd57066115382aae2a61dad3a06bbc00d6b66ca13e82582da9c51e0b64"
 
 [[packages]]
 name = "imgui-glut"
-version = "1.91.9"
-file = "packages/imgui-glut-1.91.9.tar.gz"
-sha256 = "0b49f1fe1f5321203fd336d31cb201bf61a5166d4566992e26895a5ee08fab45"
+version = "1.92.9"
+file = "packages/imgui-glut-1.92.9.tar.gz"
+sha256 = "9fd63ed59c3b00eb2677d828ed4204a20a53a5b32ce16a745780994ce6e80a4a"
 
 [[packages]]
 name = "imgui-metal"
-version = "1.91.9"
-file = "packages/imgui-metal-1.91.9.tar.gz"
-sha256 = "ab7b00715438b1cb2de425b4d7f7f8731e727b19e01fdcdf2aa81ea88157550e"
+version = "1.92.9"
+file = "packages/imgui-metal-1.92.9.tar.gz"
+sha256 = "16d9db02faf1ecb09a6857d6ac6838998cf376a26685b658082ea765463c113d"
 
 [[packages]]
 name = "imgui-opengl2"
-version = "1.91.9"
-file = "packages/imgui-opengl2-1.91.9.tar.gz"
-sha256 = "727f282820db20e66c4273b9744ee7dbe85bc6ad4df84fa46767b2811031ccc1"
+version = "1.92.9"
+file = "packages/imgui-opengl2-1.92.9.tar.gz"
+sha256 = "6b57256c9f57530ebab601f4ffd2ab6f90ced9dc372ec1310802b1a74a465895"
 
 [[packages]]
 name = "imgui-opengl3"
-version = "1.91.9"
-file = "packages/imgui-opengl3-1.91.9.tar.gz"
-sha256 = "3bbcd9311d04ce0c5ceea321fba088b0f428ae1209856776222e9a3332b7043b"
+version = "1.92.9"
+file = "packages/imgui-opengl3-1.92.9.tar.gz"
+sha256 = "4f3cf5c8f8acdee5a1d639c60d3ee48357e92e091e3fe978dbbde1b07c693460"
 
 [[packages]]
 name = "imgui-osx"
-version = "1.91.9"
-file = "packages/imgui-osx-1.91.9.tar.gz"
-sha256 = "8adee9709e3ff5e493cd48f6b846ec5b4757b70602afb7232f40868b6a228269"
+version = "1.92.9"
+file = "packages/imgui-osx-1.92.9.tar.gz"
+sha256 = "b183251bdd1c11a916bad198c35eb7c8f6fecfc7d879d911f59920fd21cb8c8e"
 
 [[packages]]
 name = "imgui-sdl2"
-version = "1.91.9"
-file = "packages/imgui-sdl2-1.91.9.tar.gz"
-sha256 = "28bbf63e7452aa08a1e40a7417ecd8a80244b09ef955668315180e54c7ce1181"
+version = "1.92.9"
+file = "packages/imgui-sdl2-1.92.9.tar.gz"
+sha256 = "17242af3052aaf79b1101bcd4a36da621866931a4810f5aa56581a2a9a176e80"
 
 [[packages]]
 name = "imgui-sdl3"
-version = "1.91.9"
-file = "packages/imgui-sdl3-1.91.9.tar.gz"
-sha256 = "35872d732a243143b9d7c616dfe1ab7d2db471af610d35f06d04bad1995eb64b"
+version = "1.92.9"
+file = "packages/imgui-sdl3-1.92.9.tar.gz"
+sha256 = "89638383cbbd833116a294445b0ac08ca83b5ac29df7de58047e57026ad4b683"
 
 [[packages]]
 name = "imgui-vulkan"
-version = "1.91.9"
-file = "packages/imgui-vulkan-1.91.9.tar.gz"
-sha256 = "d8577d26bf72c1a34ffe41e708615e33ac9416b55a58c3c9ccd320f58a5faa08"
+version = "1.92.9"
+file = "packages/imgui-vulkan-1.92.9.tar.gz"
+sha256 = "080c5d8159a1f45eaa3f7c53d74d9a6f3f997f98fd8ebdc26e910e1d8b4b45bc"
 
 [[packages]]
 name = "imgui-wgpu"
-version = "1.91.9"
-file = "packages/imgui-wgpu-1.91.9.tar.gz"
-sha256 = "2b1af1f5fa169f3b9c93cb159f28cb4d08a32aedc44afb718dabd82eafdacabb"
+version = "1.92.9"
+file = "packages/imgui-wgpu-1.92.9.tar.gz"
+sha256 = "55313e764867c534d51e33c999d8b2dcf5d696e355754a02e085bc9c7f3e5b96"
 
 [[packages]]
 name = "imgui-win32"
-version = "1.91.9"
-file = "packages/imgui-win32-1.91.9.tar.gz"
-sha256 = "c33b8e4ee31b17c9bd7f40eba710820dd3e712342ee33f87daa79d68ba6b39e0"
+version = "1.92.9"
+file = "packages/imgui-win32-1.92.9.tar.gz"
+sha256 = "2ba449d452a8a4673576f991040a3f4b27d4c4ed21b66a9cd9cfb270f77d5dd5"
 
 [[packages]]
 name = "libcurl"
 version = "8.11.0"
 file = "packages/libcurl-8.11.0.tar.gz"
-sha256 = "0e51046a2ad9a422872cc7bf7e9f580e634ff9ce4d022b2bb1fe0bbe8eac23fd"
+sha256 = "507124bf0005970c368a7c7036c06ea1cb7aed4e042e43929c52d42520a37461"
+
+[[packages]]
+name = "libpqxx"
+version = "8.0.2"
+file = "packages/libpqxx-8.0.2.tar.gz"
+sha256 = "564be63d1133674b7855c95f687d26b5ee215a68d0b27494e27e969493993f9a"
 
 [[packages]]
 name = "libpqxx"
 version = "7.9.2"
 file = "packages/libpqxx-7.9.2.tar.gz"
-sha256 = "ce82233db594edf9a53a26c24f1931286d18179eae95a95ec7a209694246c36e"
+sha256 = "93e417b40da3ce57fab94e99bd7d1a979b6e47a3d30892d6171f154048a1822d"
+
+[[packages]]
+name = "lua"
+version = "5.5.1"
+file = "packages/lua-5.5.1.tar.gz"
+sha256 = "c24f1681d6d36b66408585f8cc5354df299a59e9816071e6ffa628b391aa7815"
 
 [[packages]]
 name = "lua"
 version = "5.4.7"
 file = "packages/lua-5.4.7.tar.gz"
-sha256 = "917f3daa98baa96c650bf15dae0edb44000f1c048a9feb16dc9026b395433c9e"
+sha256 = "5bfb351dd1c37708012c441af839c585ccd5460c6e8c2102f333f6d970e36bad"
 
 [[packages]]
 name = "magic_enum"
 version = "0.9.8"
 file = "packages/magic_enum-0.9.8.tar.gz"
-sha256 = "ee3d27632d94266e0ec0777e1111abf875bb42087fd45f4912b764f025426bc5"
+sha256 = "c98bef26019db6f8399c0314891df249c236857f3aaf7a967fa66544a40b91f8"
+
+[[packages]]
+name = "msgpack-c"
+version = "7.0.2"
+file = "packages/msgpack-c-7.0.2.tar.gz"
+sha256 = "ee5b402e9d79c5d4ef9236b916204ceecf1144ea465b31a2894466c45ed9e848"
 
 [[packages]]
 name = "msgpack-c"
 version = "6.1.0"
 file = "packages/msgpack-c-6.1.0.tar.gz"
-sha256 = "c3c2385ee348e6387dcec8b648a155701af7c2c2de76fb4636318aa761328ba4"
+sha256 = "43576904f83dd126591cc677142b9dfd84cda4b9e41651937e723b3b25f5e201"
 
 [[packages]]
 name = "nlohmann_json"
-version = "3.11.3"
-file = "packages/nlohmann_json-3.11.3.tar.gz"
-sha256 = "edf5f470870fe6bf03a0a87f7a3d916640285aec2c6dc8d110eb97eee128b3b3"
-
-[[packages]]
-name = "rapidjson"
-version = "1.1.0"
-file = "packages/rapidjson-1.1.0.tar.gz"
-sha256 = "b1b9a308603bc160d5e14b63086f56fe805eb1b87d074810ea66cd3a7a77d699"
+version = "3.12.0"
+file = "packages/nlohmann_json-3.12.0.tar.gz"
+sha256 = "c9ff06d7723e4b5685888937911fc272da6ca7c0d685205bf0a5dc8e9bebd15b"
 
 [[packages]]
 name = "openssl"
 version = "3.4.0"
 file = "packages/openssl-3.4.0.tar.gz"
-sha256 = "02bcda0c60f1407ff02b7f755cf1933accf06f7f63b9951e65a01e4024416459"
+sha256 = "ac679725a76134780f067c6e2ddf0e8d1f3eb76e40b744f4b18f37e64a7c8350"
 
 [[packages]]
 name = "protobuf"
 version = "28.3"
 file = "packages/protobuf-28.3.tar.gz"
-sha256 = "a76026fd3fef60780dfdc0768d11f1216e65de91afdad86384efba781ad3169b"
+sha256 = "ad7afe938a59b7b968baccc3366877cb53965b90c47208f82ba3569529922e37"
+
+[[packages]]
+name = "rapidjson"
+version = "1.1.0"
+file = "packages/rapidjson-1.1.0.tar.gz"
+sha256 = "a6ec6e69d200b29e3ecd6e88c00f4ed26ee6efccad053d43aff037582c76274e"
 
 [[packages]]
 name = "sdl2"
 version = "2.32.10"
 file = "packages/sdl2-2.32.10.tar.gz"
-sha256 = "4d33a6d3839f6ec71d2ac0ac25623ff8391c826bd2790dbdfa4d7149c2974781"
+sha256 = "8a4eb096e89a0f839ce858748f4fff640e28a94cee4c98f7e3e839cafd9022f3"
 
 [[packages]]
 name = "spdlog"
-version = "1.15.1"
-file = "packages/spdlog-1.15.1.tar.gz"
-sha256 = "8d85d708cce545245190ba872feea5978fc5a421f830d8e1a16907abe3342f47"
+version = "1.17.0"
+file = "packages/spdlog-1.17.0.tar.gz"
+sha256 = "beab8431c972938783bf4504be5e9c24fb468fc098ded172038e429ddbc25882"
 
 [[packages]]
 name = "sqlite3"
-version = "3.49.1"
-file = "packages/sqlite3-3.49.1.tar.gz"
-sha256 = "b5758d80ea20382a8a26f9d7fa01ed983678a9e23d862dc372ea3012771324ae"
+version = "3.53.4"
+file = "packages/sqlite3-3.53.4.tar.gz"
+sha256 = "ae4d358ebe9ef022dcff5318f6abf1c56ffabc1a8c008422d9f911c6603124e6"
 
 [[packages]]
 name = "sqlitecpp"
-version = "3.3.0"
-file = "packages/sqlitecpp-3.3.0.tar.gz"
-sha256 = "eee93544d273b30c80d7b1e239ee1448dd38f83e2a652a47d4f95ad5133aeb1e"
+version = "3.4.0"
+file = "packages/sqlitecpp-3.4.0.tar.gz"
+sha256 = "4d28fbc4815ca4d655db947c23b1b0977321e9dec46746b5bf80f8aaacad8d72"
 
 [[packages]]
 name = "stb-ds"
 version = "0.67.0"
 file = "packages/stb-ds-0.67.0.tar.gz"
-sha256 = "a7f127a12b62fca7532b1a696df99562b59094914fe088c3acd57f48087ec60a"
+sha256 = "00a1d3980f5bdfe2627196bb4f96a5504352fec4981da4152f02379b2a26637d"
 
 [[packages]]
 name = "stb-image"
 version = "2.30.0"
 file = "packages/stb-image-2.30.0.tar.gz"
-sha256 = "345fe056cb1307eed37e7a568a7ab1e32eb6795e26759a0ea1bbdb30d26ebf31"
+sha256 = "242b386f44793cc10776834aac23f3f6caeb630a4b3db49519b75558e60228c0"
 
 [[packages]]
 name = "stb-image-resize"
 version = "0.97.0"
 file = "packages/stb-image-resize-0.97.0.tar.gz"
-sha256 = "7c4573facceb6995ea516304212760f48d9dcf223c136ce2ef7b338647e93a24"
+sha256 = "534bac0822851749014f33361653bc392758087b8b11846c3d645fd8a17fb6d4"
 
 [[packages]]
 name = "stb-image-write"
 version = "1.16.0"
 file = "packages/stb-image-write-1.16.0.tar.gz"
-sha256 = "0aa1fc345f9f179e8ddf9f9987a9fa3831c42c548e93f15d9ab165fe4dc162b5"
+sha256 = "a758d8e4a884d88f7adb7a3f3d5f49da33d5bdeb50bfefe27e60553eb7bc1a16"
 
 [[packages]]
 name = "stb-perlin"
 version = "0.05.0"
 file = "packages/stb-perlin-0.05.0.tar.gz"
-sha256 = "3a7f364087ef895492415ae84682849deed87c526578fae2b0a47fd29cc7716b"
+sha256 = "35f742f5f3a6abd8244bf8fb2083503b432997b608d56f5209b9c528e4d543e9"
 
 [[packages]]
 name = "stb-rect-pack"
 version = "1.01.0"
 file = "packages/stb-rect-pack-1.01.0.tar.gz"
-sha256 = "49321e51cbcce880517f6734ac53790f0dfd79667fa102c89e809aad81d57079"
+sha256 = "71fbd1d39894db5597eb55e4f631d6fd2468759ac9564eef2438b20e1e9397ac"
 
 [[packages]]
 name = "stb-sprintf"
 version = "1.10.0"
 file = "packages/stb-sprintf-1.10.0.tar.gz"
-sha256 = "57015573365647b0a6a1af868663e2546cdfc90c8747756bf3094dd51a4785a9"
+sha256 = "142d93398a29d390c3ad6d45d956d043fcf3195c3487b56634875f15c1317440"
 
 [[packages]]
 name = "stb-textedit"
 version = "1.14.0"
 file = "packages/stb-textedit-1.14.0.tar.gz"
-sha256 = "48d64bed6c5f3ffeb568ddfa8bd672057661d59623c353aba079459fb1236806"
+sha256 = "18187cf4bdd7a8b9e1e14f7985b3d68f89293870a29dc64cb2216e84ad070023"
 
 [[packages]]
 name = "stb-truetype"
 version = "1.27.0"
 file = "packages/stb-truetype-1.27.0.tar.gz"
-sha256 = "1d5c79dece9277c6a2d7b3ea656f6a28f680346679e392e0e02cfebd0f29c1a6"
+sha256 = "03ab59da8708572f441df8d76da66f44f09eaaa9d0cde14afaeafdcb8982f811"
 
 [[packages]]
 name = "stb-vorbis"
 version = "1.22.0"
 file = "packages/stb-vorbis-1.22.0.tar.gz"
-sha256 = "f2b6fcf8855e51f04be6c218354410fafd66fad5a206445d4369315e97475ab1"
-
-[[packages]]
-name = "tinyxml2"
-version = "11.0.0"
-file = "packages/tinyxml2-11.0.0.tar.gz"
-sha256 = "bd3f7e880e4bd326710aa375bf204d1b55ead1da6aec3c968d3b9a391d6a7f96"
-
-[[packages]]
-name = "tomlplusplus"
-version = "3.4.0"
-file = "packages/tomlplusplus-3.4.0.tar.gz"
-sha256 = "4c2cbfed9892fe90754ef68e36e88aa92dd32940cba1bdf6f3a4dde2d8e5027d"
-
-[[packages]]
-name = "yaml-cpp"
-version = "0.8.0"
-file = "packages/yaml-cpp-0.8.0.tar.gz"
-sha256 = "119f0c9cfecd11c6b94774fb767f70e6d645e3f73f78085c965a13fda984bbcc"
-
-[[packages]]
-name = "zlib"
-version = "1.3.1"
-file = "packages/zlib-1.3.1.tar.gz"
-sha256 = "ccf232f99051c907a8dd1c2858509f473d8b3e60f8d125939252ea8e6d0ca2e8"
-
+sha256 = "aa75951dcd97713efeab1f450c72eb67c69dfe0fba82bbe3d712b6670b1d6ef6"
 
 [[packages]]
 name = "term_pic"
 version = "0.1.2"
 file = "packages/term_pic-0.1.2.tar.gz"
-sha256 = "c8ad300676c3fc4d0f3202a7d6e93316ad9f5fba969a416659b21b29cd2e7225"
+sha256 = "6117623fa7dd5f40707c40ddcaaf9395b4307043d2112fa904458c000d5630d9"
 
 [[packages]]
-name = "vt100_utils"
-version = "0.1.0"
-file = "packages/vt100_utils-0.1.0.tar.gz"
-sha256 = "6e25c461fa49d4fe39523190298e1815e3be5fd9177e649d097ebb0212c0b3b0"
+name = "tinyxml2"
+version = "11.0.0"
+file = "packages/tinyxml2-11.0.0.tar.gz"
+sha256 = "5eb2d4ed0cf36af48f8a8fec8e436c49943745c140ca10996c18b6245e316ae8"
+
+[[packages]]
+name = "tomlplusplus"
+version = "3.4.0"
+file = "packages/tomlplusplus-3.4.0.tar.gz"
+sha256 = "bea39fac42dd0a6ba94378ce142c94d6a7704971a411d56e0479a737f4bf3d75"
 
 [[packages]]
 name = "vt100_utils"
 version = "0.2.0"
 file = "packages/vt100_utils-0.2.0.tar.gz"
-sha256 = "aae54450ab72f5b18a6444e5c710b4a84fd9dad24880ba5b4f944ce612764e06"
+sha256 = "bf9f73079a44f3cf21a2fe4062ead4205786a436504acbe5b4e92bb82a0c275c"
+
+[[packages]]
+name = "vt100_utils"
+version = "0.1.0"
+file = "packages/vt100_utils-0.1.0.tar.gz"
+sha256 = "47e31ebda2ab67de1ca6b7cee5cdee6f3f0ccac57fd90398a9f26464c5b92726"
+
+[[packages]]
+name = "yaml-cpp"
+version = "0.8.0"
+file = "packages/yaml-cpp-0.8.0.tar.gz"
+sha256 = "a13683a4b807853102a0953f71c600c2660dbd569aa68c64c4fc0a34e32b677e"
+
+[[packages]]
+name = "zlib"
+version = "1.3.2"
+file = "packages/zlib-1.3.2.tar.gz"
+sha256 = "bd222984dfc06e8bc4cb75d2258e08ddf11bf4189ffac2e93fa32453d9972a76"
+

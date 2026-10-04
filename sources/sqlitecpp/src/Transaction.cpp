@@ -3,7 +3,7 @@
  * @ingroup SQLiteCpp
  * @brief   A Transaction is way to group multiple SQL statements into an atomic secured operation.
  *
- * Copyright (c) 2012-2023 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+ * Copyright (c) 2012-2026 Sebastien Rombauts (sebastien.rombauts@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -55,7 +55,7 @@ Transaction::~Transaction()
         {
             mDatabase.exec("ROLLBACK TRANSACTION");
         }
-        catch (SQLite::Exception&)
+        catch (...)
         {
             // Never throw an exception in a destructor: error if already rollbacked, but no harm is caused by this.
         }

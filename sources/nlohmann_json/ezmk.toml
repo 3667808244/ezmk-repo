@@ -1,7 +1,7 @@
 [project]
 name = "nlohmann_json"
 type = "static"
-version = "3.11.3"
+version = "3.12.0"
 language = "C++17"
 
 [compile]

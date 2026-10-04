@@ -3,7 +3,7 @@
  * @ingroup SQLiteCpp
  * @brief   A prepared SQLite Statement is a compiled SQL query ready to be executed, pointing to a row of result.
  *
- * Copyright (c) 2012-2023 Sebastien Rombauts (sebastien.rombauts@gmail.com)
+ * Copyright (c) 2012-2026 Sebastien Rombauts (sebastien.rombauts@gmail.com)
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
  * or copy at http://opensource.org/licenses/MIT)
@@ -14,6 +14,8 @@
 #include <SQLiteCpp/Exception.h>
 #include <SQLiteCpp/Utils.h> // SQLITECPP_PURE_FUNC
 
+#include <cstdint>
+#include <iterator>
 #include <string>
 #include <map>
 #include <memory>
@@ -77,9 +79,9 @@ public:
     Statement(const Statement&) = delete;
     Statement& operator=(const Statement&) = delete;
 
-    // TODO: Change Statement move constructor to default
+    // Statement is movable
     Statement(Statement&& aStatement) noexcept;
-    Statement& operator=(Statement&& aStatement) noexcept = default;
+    Statement& operator=(Statement&& aStatement) = default;
 
     /// Finalize and unregister the SQL query from the SQLite Database Connection.
     /// The finalization will be done by the destructor of the last shared pointer
@@ -157,6 +159,17 @@ public:
      */
     void bind(const int aIndex, const void*         apValue, const int aSize);
     /**
+     * @brief Bind a binary blob using a 64-bit size.
+     *
+     * @param[in] aIndex  Index of the parameter to bind (aIndex >= 1)
+     * @param[in] apValue Pointer to the binary data
+     * @param[in] aSize   Size of the binary data in bytes
+     * @throw SQLite::Exception in case of error
+     *
+     * @note Uses the SQLITE_TRANSIENT flag, making a copy of the data, for SQLite internal use
+     */
+    void bind64(const int aIndex, const void* apValue, const uint64_t aSize);
+    /**
      * @brief Bind a string value to a parameter "?", "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement (aIndex >= 1).
      *
      * The string can contain null characters as it is binded using its size.
@@ -178,6 +191,23 @@ public:
      * @warning Uses the SQLITE_STATIC flag, avoiding a copy of the data. The string must remains unchanged while executing the statement.
      */
     void bindNoCopy(const int aIndex, const void*           apValue, const int aSize);
+    /**
+     * @brief Bind a binary blob using a 64-bit size without copying it.
+     *
+     * @param[in] aIndex  Index of the parameter to bind (aIndex >= 1)
+     * @param[in] apValue Pointer to the binary data
+     * @param[in] aSize   Size of the binary data in bytes
+     * @throw SQLite::Exception in case of error
+     *
+     * @warning Uses the SQLITE_STATIC flag. The data must remain valid and unchanged until the parameter is
+     *          rebound or the statement is finalized. Resetting the statement does not clear the binding.
+     */
+    void bindNoCopy64(const int aIndex, const void* apValue, const uint64_t aSize);
+    /**
+     * @brief Deleted, because the value's lifetime could not be guaranteed. Use bind().
+     */
+    void bindNoCopy(const int aIndex, std::string&& aValue) = delete;
+
     /**
      * @brief Bind a NULL value to a parameter "?", "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement (aIndex >= 1)
      *
@@ -241,6 +271,20 @@ public:
         bind(getIndex(apName), apValue, aSize);
     }
     /**
+     * @brief Bind a binary blob to a named parameter using a 64-bit size.
+     *
+     * @param[in] apName  Name of the parameter to bind
+     * @param[in] apValue Pointer to the binary data
+     * @param[in] aSize   Size of the binary data in bytes
+     * @throw SQLite::Exception in case of error
+     *
+     * @note Uses the SQLITE_TRANSIENT flag, making a copy of the data, for SQLite internal use
+     */
+    void bind64(const char* apName, const void* apValue, const uint64_t aSize)
+    {
+        bind64(getIndex(apName), apValue, aSize);
+    }
+    /**
      * @brief Bind a string value to a named parameter "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement (aIndex >= 1)
      *
      * The string can contain null characters as it is binded using its size.
@@ -271,6 +315,25 @@ public:
     {
         bindNoCopy(getIndex(apName), apValue, aSize);
     }
+    /**
+     * @brief Bind a binary blob to a named parameter using a 64-bit size without copying it.
+     *
+     * @param[in] apName  Name of the parameter to bind
+     * @param[in] apValue Pointer to the binary data
+     * @param[in] aSize   Size of the binary data in bytes
+     * @throw SQLite::Exception in case of error
+     *
+     * @warning Uses the SQLITE_STATIC flag. The data must remain valid and unchanged until the parameter is
+     *          rebound or the statement is finalized. Resetting the statement does not clear the binding.
+     */
+    void bindNoCopy64(const char* apName, const void* apValue, const uint64_t aSize)
+    {
+        bindNoCopy64(getIndex(apName), apValue, aSize);
+    }
+    /**
+     * @brief Deleted, because the value's lifetime could not be guaranteed. Use bind().
+     */
+    void bindNoCopy(const char* apName, std::string&& aValue) = delete;
     /**
      * @brief Bind a NULL value to a named parameter "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement (aIndex >= 1)
      *
@@ -338,6 +401,20 @@ public:
         bind(aName.c_str(), apValue, aSize);
     }
     /**
+     * @brief Bind a binary blob to a named parameter using a 64-bit size.
+     *
+     * @param[in] aName   Name of the parameter to bind
+     * @param[in] apValue Pointer to the binary data
+     * @param[in] aSize   Size of the binary data in bytes
+     * @throw SQLite::Exception in case of error
+     *
+     * @note Uses the SQLITE_TRANSIENT flag, making a copy of the data, for SQLite internal use
+     */
+    void bind64(const std::string& aName, const void* apValue, const uint64_t aSize)
+    {
+        bind64(aName.c_str(), apValue, aSize);
+    }
+    /**
      * @brief Bind a string value to a named parameter "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement (aIndex >= 1)
      *
      * The string can contain null characters as it is binded using its size.
@@ -368,6 +445,25 @@ public:
     {
         bindNoCopy(aName.c_str(), apValue, aSize);
     }
+    /**
+     * @brief Bind a binary blob to a named parameter using a 64-bit size without copying it.
+     *
+     * @param[in] aName   Name of the parameter to bind
+     * @param[in] apValue Pointer to the binary data
+     * @param[in] aSize   Size of the binary data in bytes
+     * @throw SQLite::Exception in case of error
+     *
+     * @warning Uses the SQLITE_STATIC flag. The data must remain valid and unchanged until the parameter is
+     *          rebound or the statement is finalized. Resetting the statement does not clear the binding.
+     */
+    void bindNoCopy64(const std::string& aName, const void* apValue, const uint64_t aSize)
+    {
+        bindNoCopy64(aName.c_str(), apValue, aSize);
+    }
+    /**
+     * @brief Deleted, because the value's lifetime could not be guaranteed. Use bind().
+     */
+    void bindNoCopy(const std::string& aName, std::string&& aValue) = delete;
     /**
      * @brief Bind a NULL value to a named parameter "?NNN", ":VVV", "@VVV" or "$VVV" in the SQL prepared statement (aIndex >= 1)
      *
@@ -645,6 +741,73 @@ public:
 
     /// Shared pointer to SQLite Prepared Statement Object
     using TStatementPtr = std::shared_ptr<sqlite3_stmt>;
+
+    /**
+     * @brief Input iterator over the rows of a prepared SELECT statement.
+     *
+     *  Allows range-based for loops over query results:
+     * @code
+     *  SQLite::Statement query(db, "SELECT id, name FROM test");
+     *  for (SQLite::Statement& row : query)
+     *  {
+     *      std::cout << row.getColumn(0).getInt() << "\n";
+     *  }
+     * @endcode
+     *
+     *  Each increment calls executeStep() to advance to the next row.
+     *  Dereferencing returns the Statement itself, giving access to getColumn().
+     *
+     * @warning Only one active RowIterator per Statement is supported.
+     */
+    struct RowIterator
+    {
+        using iterator_category = std::input_iterator_tag;
+        using value_type        = Statement;
+        using difference_type   = std::ptrdiff_t;
+        using pointer           = Statement*;
+        using reference         = Statement&;
+
+        Statement* mpStatement = nullptr; ///< Pointer to the iterated Statement, nullptr when done
+
+        /// Construct an end sentinel (no associated Statement).
+        RowIterator() = default;
+
+        /// Construct an iterator pointing to the current row of apStatement.
+        SQLITECPP_API explicit RowIterator(Statement* apStatement);
+
+        /// Advance to the next row. Becomes the end sentinel when no rows remain.
+        SQLITECPP_API RowIterator& operator++();
+
+        /// Post-increment: advance to the next row.
+        SQLITECPP_API void operator++(int);
+
+        /// Return true when both iterators refer to the same statement, or are both the end sentinel.
+        SQLITECPP_API bool operator==(const RowIterator& aOther) const;
+
+        /// Return true when the iterators do not refer to the same statement.
+        SQLITECPP_API bool operator!=(const RowIterator& aOther) const;
+
+        /// Dereference to the Statement, giving access to getColumn().
+        SQLITECPP_API Statement& operator*() const;
+    };
+
+    /**
+     * @brief Return an iterator to the first row of the result set.
+     *
+     *  Calls reset() then executeStep() so that iterating the same Statement
+     *  a second time always starts from the beginning.
+     *  Returns the end iterator immediately if the result set is empty.
+     *
+     * @note Bindings set before the loop are preserved across reset().
+     *
+     * @throw SQLite::Exception in case of error
+     */
+    RowIterator begin();
+
+    /**
+     * @brief Return the end sentinel iterator (past the last row).
+     */
+    RowIterator end();
 
 private:
     /**

@@ -1,7 +1,7 @@
 [project]
 name = "catch2"
 type = "static"
-version = "3.6.0"
+version = "3.16.0"
 language = "C++17"
 
 [compile]
