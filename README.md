@@ -42,17 +42,17 @@ lib = ["hello-lib"]
 | `glfw` | 3.5.1 | static | C11 | 跨平台窗口/输入/OpenGL 上下文库 |
 | `glm` | 1.0.3 | static | C++17 | OpenGL Mathematics（GLSL 风格数学库） |
 | `googletest` | 1.18.0 | static | C++17 | GoogleTest + GoogleMock C++ 测试框架 |
-| `gRPC` | 1.68.0 | static (precompiled) | C++17 | 高性能 RPC 框架（预编译） |
+| `gRPC` | 1.68.0 | static (precompiled) | C++17 | 高性能 RPC 框架（预编译，linux-x64） |
 | `hello-lib` | 0.1.0 | static | C++17 | 最小示例静态库 |
 | `hiredis` | 1.4.1 | static | C11 | Redis 的极简 C 客户端 |
-| `libcurl` | 8.11.0 | static (precompiled) | C11 | 多协议文件传输库（预编译） |
+| `libcurl` | 8.22.0 | static (precompiled) | C11 | 多协议文件传输库（预编译，linux-x64） |
 | `libpqxx` | 8.0.2 | static | C++17 | PostgreSQL 官方 C++ 客户端 API |
 | `lua` | 5.5.1 | static | C99 | Lua 5.5 解释器 C 库 |
 | `magic_enum` | 0.9.8 | static | C++17 | 编译期枚举反射（header-only） |
 | `msgpack-c` | 7.0.2 | static (header-only) | C11 | MessagePack 二进制序列化（C） |
 | `nlohmann_json` | 3.12.0 | static | C++17 | JSON for Modern C++（单头文件 + stub） |
-| `openssl` | 3.4.0 | static (precompiled) | C11 | TLS/SSL 密码学库（预编译） |
-| `protobuf` | 28.3 | static (precompiled) | C++17 | Protocol Buffers 结构化数据序列化（预编译） |
+| `openssl` | 3.6.5 | static (precompiled) | C11 | TLS/SSL 密码学库（预编译，linux-x64） |
+| `protobuf` | 36.2 | static (precompiled) | C++17 | Protocol Buffers 结构化数据序列化（预编译，含 abseil） |
 | `rapidjson` | 1.1.0 | static | C++17 | 快速 JSON 解析/生成库 |
 | `sdl2` | 2.32.10 | static (precompiled) | C11 | Simple DirectMedia Layer 2（预编译） |
 | `spdlog` | 1.17.0 | static | C++17 | 高性能 C++ 日志库（依赖 fmt） |
@@ -139,13 +139,14 @@ lib = ["hello-lib"]
 
 | Package | Version | Type | Language | Description |
 | --- | --- | --- | --- | --- |
-| `cpp-httplib` | 0.18.3 | static (header-only) | C++11 | 保留的旧版本（0.x minor 破坏性升级前） |
-| `eigen` | 3.4.0 | static (header-only) | C++17 | 保留的旧版本（Eigen 3 → 5 破坏性升级前） |
-| `fmt` | 10.2.1 | static | C++17 | 保留的旧版本（fmt 10 → 12 破坏性升级前） |
-| `libpqxx` | 7.9.2 | static | C++17 | 保留的旧版本（libpqxx 7 → 8 破坏性升级前） |
-| `lua` | 5.4.7 | static | C99 | 保留的旧版本（Lua 5.4 → 5.5 前） |
-| `msgpack-c` | 6.1.0 | static (header-only) | C11 | 保留的旧版本（msgpack-c 6 → 7 破坏性升级前） |
-| `vt100_utils` | 0.1.0 | static | C++11 | 保留的旧版本 |
+| `cpp-httplib` | 0.18.3 | static (header-only) | C++11 | 保留的旧版本（当前最新 0.59.0） |
+| `eigen` | 3.4.0 | static (header-only) | C++17 | 保留的旧版本（当前最新 5.0.1） |
+| `fmt` | 10.2.1 | static | C++17 | 保留的旧版本（当前最新 12.2.0） |
+| `libpqxx` | 7.9.2 | static | C++17 | 保留的旧版本（当前最新 8.0.2） |
+| `lua` | 5.4.7 | static | C99 | 保留的旧版本（当前最新 5.5.1） |
+| `msgpack-c` | 6.1.0 | static (header-only) | C11 | 保留的旧版本（当前最新 7.0.2） |
+| `protobuf` | 28.3 | static (precompiled) | C++17 | 保留的旧版本（当前最新 36.2） |
+| `vt100_utils` | 0.1.0 | static | C++11 | 保留的旧版本（当前最新 0.2.0） |
 
 ### 依赖关系
 
@@ -153,7 +154,7 @@ lib = ["hello-lib"]
 spdlog     ──→ fmt
 sqlitecpp  ──→ sqlite3
 libcurl    ──→ openssl, zlib
-gRPC       ──→ protobuf, openssl
+gRPC       ──→ protobuf, openssl, zlib
 cpp-httplib ──→ (可选) openssl
 
 # Boost header-only 内部依赖（仅编译期）

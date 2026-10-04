@@ -20,6 +20,7 @@
 #include <string>
 #include <type_traits>
 #include <utility>
+#include <variant>
 #include <vector>
 
 #include "absl/cleanup/cleanup.h"
@@ -27,13 +28,13 @@
 #include "absl/functional/any_invocable.h"
 #include "absl/functional/function_ref.h"
 #include "absl/log/absl_check.h"
-#include "absl/meta/type_traits.h"
 #include "absl/strings/str_cat.h"
 #include "absl/strings/str_format.h"
 #include "absl/strings/string_view.h"
 #include "absl/types/optional.h"
-#include "absl/types/variant.h"
+#include "absl/types/span.h"
 #include "google/protobuf/io/zero_copy_sink.h"
+#include "google/protobuf/io/zero_copy_stream.h"
 
 
 // Must be included last.
@@ -124,8 +125,8 @@ class AnnotationProtoCollector : public AnnotationCollector {
                      const std::string& file_path, const std::vector<int>& path,
                      absl::optional<Semantic> semantic) override {
     auto* annotation = annotation_proto_->add_annotation();
-    for (int i = 0; i < path.size(); ++i) {
-      annotation->add_path(path[i]);
+    for (const int segment : path) {
+      annotation->add_path(segment);
     }
     annotation->set_source_file(file_path);
     annotation->set_begin(begin_offset);
@@ -138,7 +139,8 @@ class AnnotationProtoCollector : public AnnotationCollector {
 
   void AddAnnotationNew(Annotation& a) override {
     auto* annotation = annotation_proto_->add_annotation();
-    annotation->ParseFromString(a.second);
+    // TODO: Remove this suppression.
+    (void)annotation->ParseFromString(a.second);
     annotation->set_begin(a.first.first);
     annotation->set_end(a.first.second);
   }
@@ -532,12 +534,13 @@ class PROTOBUF_EXPORT Printer {
   // Pushes a new variable lookup frame that stores `vars` by value.
   //
   // Returns an RAII object that pops the lookup frame.
-  template <typename Map = absl::flat_hash_map<std::string, std::string>,
-            typename = std::enable_if_t<!std::is_pointer<Map>::value>,
-            // Prefer the more specific span impl if this could be turned into
-            // a span.
-            typename = std::enable_if_t<
-                !std::is_convertible<Map, absl::Span<const Sub>>::value>>
+  template <
+      typename Map = absl::flat_hash_map<absl::string_view, absl::string_view>,
+      typename = std::enable_if_t<!std::is_pointer_v<Map>>,
+      // Prefer the more specific span impl if this could be turned into
+      // a span.
+      typename =
+          std::enable_if_t<!std::is_convertible_v<Map, absl::Span<const Sub>>>>
   auto WithVars(Map&& vars);
 
   // Pushes a new variable lookup frame that stores `vars` by value.
@@ -608,7 +611,8 @@ class PROTOBUF_EXPORT Printer {
   // -- Old-style API below; to be deprecated and removed. --
   // TODO: Deprecate these APIs.
 
-  template <typename Map = absl::flat_hash_map<std::string, std::string>>
+  template <
+      typename Map = absl::flat_hash_map<absl::string_view, absl::string_view>>
   void Print(const Map& vars, absl::string_view text);
 
   template <typename... Args>
@@ -660,7 +664,7 @@ class PROTOBUF_EXPORT Printer {
   void Indent() { indent_ += options_.spaces_per_indent; }
 
   // Undoes a call to Indent().
-  void Outdent();
+  void Outdent(SourceLocation loc = SourceLocation::current());
 
   // FormatInternal is a helper function not meant to use directly, use
   // compiler::cpp::Formatter instead.
@@ -840,7 +844,7 @@ struct Printer::ValueImpl {
   using StringType = std::conditional_t<owned, std::string, absl::string_view>;
   // These callbacks return false if this is a recursive call.
   using Callback = std::function<bool()>;
-  using StringOrCallback = absl::variant<StringType, Callback>;
+  using StringOrCallback = std::variant<StringType, Callback>;
 
   ValueImpl() = default;
 
@@ -850,7 +854,7 @@ struct Printer::ValueImpl {
                 !IsSubImpl<absl::remove_cvref_t<Value>>::value>>
   ValueImpl(Value&& value)  // NOLINT
       : value(ToStringOrCallback(std::forward<Value>(value), Rank2{})) {
-    if (absl::holds_alternative<Callback>(this->value)) {
+    if (std::holds_alternative<Callback>(this->value)) {
       consume_after = ";,";
     }
   }
@@ -864,11 +868,9 @@ struct Printer::ValueImpl {
   template <bool that_owned>
   ValueImpl& operator=(const ValueImpl<that_owned>& that);
 
-  const StringType* AsString() const {
-    return absl::get_if<StringType>(&value);
-  }
+  const StringType* AsString() const { return std::get_if<StringType>(&value); }
 
-  const Callback* AsCallback() const { return absl::get_if<Callback>(&value); }
+  const Callback* AsCallback() const { return std::get_if<Callback>(&value); }
 
   StringOrCallback value;
   std::string consume_after;
@@ -910,10 +912,10 @@ Printer::ValueImpl<owned>& Printer::ValueImpl<owned>::operator=(
 
   using ThatStringType = typename ValueImpl<that_owned>::StringType;
 
-  if (auto* str = absl::get_if<ThatStringType>(&that.value)) {
+  if (auto* str = std::get_if<ThatStringType>(&that.value)) {
     value = StringType(*str);
   } else {
-    value = absl::get<Callback>(that.value);
+    value = std::get<Callback>(that.value);
   }
 
   consume_after = that.consume_after;
@@ -949,10 +951,9 @@ struct Printer::AnnotationRecord {
   //
   // {{"foo", my_cool_descriptor}, {"bar", "file.proto"}}
 
-  template <
-      typename String,
-      std::enable_if_t<std::is_convertible<const String&, std::string>::value,
-                       int> = 0>
+  template <typename String,
+            std::enable_if_t<std::is_convertible_v<const String&, std::string>,
+                             int> = 0>
   AnnotationRecord(  // NOLINT(google-explicit-constructor)
       const String& file_path,
       absl::optional<AnnotationCollector::Semantic> semantic = absl::nullopt)
@@ -961,7 +962,7 @@ struct Printer::AnnotationRecord {
   template <typename Desc,
             // This SFINAE clause excludes char* from matching this
             // constructor.
-            std::enable_if_t<std::is_class<Desc>::value, int> = 0>
+            std::enable_if_t<std::is_class_v<Desc>, int> = 0>
   AnnotationRecord(  // NOLINT(google-explicit-constructor)
       const Desc* desc,
       absl::optional<AnnotationCollector::Semantic> semantic = absl::nullopt)

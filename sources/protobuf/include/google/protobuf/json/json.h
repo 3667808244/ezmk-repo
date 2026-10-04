@@ -5,7 +5,7 @@
 // license that can be found in the LICENSE file or at
 // https://developers.google.com/open-source/licenses/bsd
 
-// Utility functions to convert between protobuf binary format and proto3 JSON
+// Utility functions to convert between protobuf binary format and ProtoJSON
 // format.
 #ifndef GOOGLE_PROTOBUF_JSON_JSON_H__
 #define GOOGLE_PROTOBUF_JSON_JSON_H__
@@ -24,6 +24,11 @@ namespace google {
 namespace protobuf {
 namespace json {
 struct ParseOptions {
+  // Whether some legacy non-spec behaviors are accepted for bug
+  // compatibility reasons. Setting allow_legacy_nonconformant_behavior=false is
+  // recommended for new code and is expected to eventually become the default.
+  bool allow_legacy_nonconformant_behavior = true;
+
   // Whether to ignore unknown JSON fields during parsing
   bool ignore_unknown_fields = false;
 
@@ -36,6 +41,11 @@ struct ParseOptions {
 };
 
 struct PrintOptions {
+  // Whether some legacy non-spec behaviors are accepted for bug
+  // compatibility reasons. Setting allow_legacy_nonconformant_behavior=false is
+  // recommended for new code and is expected to eventually become the default.
+  bool allow_legacy_nonconformant_behavior = true;
+
   // Whether to add spaces, line breaks and indentation to make the JSON output
   // easy to read.
   bool add_whitespace = false;
@@ -69,7 +79,22 @@ inline absl::Status MessageToJsonString(const Message& message,
   return MessageToJsonString(message, output, PrintOptions());
 }
 
-// Converts from JSON to protobuf message. This works equivalently to
+// Converts from protobuf message to JSON and appends it to |json_output|. This
+// is a simple wrapper of BinaryToJsonStream(). It will use the DescriptorPool
+// of the passed-in message to resolve Any types.
+//
+// Please note that non-OK statuses are not a stable output of this API and
+// subject to change without notice.
+PROTOBUF_EXPORT absl::Status MessageToJsonStream(
+    const Message& message, io::ZeroCopyOutputStream* json_output,
+    const PrintOptions& options);
+
+inline absl::Status MessageToJsonStream(const Message& message,
+                                        io::ZeroCopyOutputStream* json_output) {
+  return MessageToJsonStream(message, json_output, PrintOptions());
+}
+
+// Converts from JSON string to protobuf message. This works equivalently to
 // JsonToBinaryStream(). It will use the DescriptorPool of the passed-in
 // message to resolve Any types.
 //
@@ -82,6 +107,20 @@ PROTOBUF_EXPORT absl::Status JsonStringToMessage(absl::string_view input,
 inline absl::Status JsonStringToMessage(absl::string_view input,
                                         Message* message) {
   return JsonStringToMessage(input, message, ParseOptions());
+}
+
+// Converts from JSON stream to protobuf message. Similar to JsonStringToMessage
+// but with input stream.
+//
+// Please note that non-OK statuses are not a stable output of this API and
+// subject to change without notice.
+PROTOBUF_EXPORT absl::Status JsonStreamToMessage(io::ZeroCopyInputStream* input,
+                                                 Message* message,
+                                                 const ParseOptions& options);
+
+inline absl::Status JsonStreamToMessage(io::ZeroCopyInputStream* input,
+                                        Message* message) {
+  return JsonStreamToMessage(input, message, ParseOptions());
 }
 
 // Converts protobuf binary data to JSON.

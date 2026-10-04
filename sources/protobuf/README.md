@@ -2,7 +2,7 @@
 
 Protocol Buffers 鈥?structured data serialization (library + protoc)
 
-- **Version**: 28.3
+- **Version**: 36.2
 - **Type**: precompiled
 - **Source**: https://github.com/protocolbuffers/protobuf
 

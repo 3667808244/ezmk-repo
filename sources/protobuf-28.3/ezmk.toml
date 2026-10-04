@@ -1,0 +1,10 @@
+﻿[project]
+name = "protobuf"
+type = "static"
+version = "28.3"
+language = "C++17"
+precompiled = true
+
+[compile]
+include_dirs = ["include"]
+flags = []

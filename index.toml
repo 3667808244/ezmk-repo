@@ -328,9 +328,9 @@ sha256 = "2ba449d452a8a4673576f991040a3f4b27d4c4ed21b66a9cd9cfb270f77d5dd5"
 
 [[packages]]
 name = "libcurl"
-version = "8.11.0"
-file = "packages/libcurl-8.11.0.tar.gz"
-sha256 = "507124bf0005970c368a7c7036c06ea1cb7aed4e042e43929c52d42520a37461"
+version = "8.22.0"
+file = "packages/libcurl-8.22.0.tar.gz"
+sha256 = "4d51b71d0a84c6b5d12fe5630ac07665cc1bc01615e5f0702a686b37d1012ec5"
 
 [[packages]]
 name = "libpqxx"
@@ -382,15 +382,21 @@ sha256 = "c9ff06d7723e4b5685888937911fc272da6ca7c0d685205bf0a5dc8e9bebd15b"
 
 [[packages]]
 name = "openssl"
-version = "3.4.0"
-file = "packages/openssl-3.4.0.tar.gz"
-sha256 = "ac679725a76134780f067c6e2ddf0e8d1f3eb76e40b744f4b18f37e64a7c8350"
+version = "3.6.5"
+file = "packages/openssl-3.6.5.tar.gz"
+sha256 = "cc3eec20e6dd16410e1061335ea04342145a9a700be2cdb353818d9c37904106"
+
+[[packages]]
+name = "protobuf"
+version = "36.2"
+file = "packages/protobuf-36.2.tar.gz"
+sha256 = "4fceaa5312b05da1af2497ce6fe3c6a5bdf16e77518d38e78b9ad3e44493a63a"
 
 [[packages]]
 name = "protobuf"
 version = "28.3"
 file = "packages/protobuf-28.3.tar.gz"
-sha256 = "ad7afe938a59b7b968baccc3366877cb53965b90c47208f82ba3569529922e37"
+sha256 = "5e8469d423b475799912b74abd904a3189b3a265300fd188a60d92ff21d6e151"
 
 [[packages]]
 name = "rapidjson"

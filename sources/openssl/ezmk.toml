@@ -1,7 +1,7 @@
 ﻿[project]
 name = "openssl"
 type = "static"
-version = "3.4.0"
+version = "3.6.5"
 language = "C11"
 precompiled = true
 [link]

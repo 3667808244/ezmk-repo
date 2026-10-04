@@ -2,7 +2,7 @@
 
 TLS/SSL cryptographic library
 
-- **Version**: 3.4.0
+- **Version**: 3.6.5
 - **Type**: precompiled
 - **Source**: https://github.com/openssl/openssl
 
